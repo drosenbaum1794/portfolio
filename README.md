@@ -7,7 +7,7 @@ to extend without touching HTML/CSS for routine updates.
 ## Repo map
 
 ```
-_config.yml           site title, tagline, author/contact info, resume path
+_config.yml           site title, tagline, author/contact info
 index.md              homepage (hero + featured projects)
 projects.md           full projects grid (auto-generated from _projects/)
 about.md              bio / background page
@@ -17,15 +17,13 @@ _layouts/             page templates (rarely need to touch these)
 _includes/            reusable snippets: nav, footer, video embed, project card
 assets/css/main.scss  all site styling, in one file, organized by section
 assets/images/        favicon + project thumbnails
-assets/files/          resume.pdf goes here
 ```
 
 ## Quick start: editing your info
 
 1. Open `_config.yml` and fill in `title`, `tagline`, `url`, `baseurl`, and
-   everything under `author:` (name, email, linkedin, github).
-2. Drop your résumé PDF at `assets/files/resume.pdf`.
-3. Rewrite `about.md` and `contact.md` with your real bio and background.
+   everything under `author:` (name, email, linkedin).
+2. Rewrite `about.md` and `contact.md` with your real bio and background.
 
 ## Adding a new project
 

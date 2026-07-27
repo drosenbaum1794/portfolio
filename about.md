@@ -33,4 +33,4 @@ and tooling that helps people do their best work.
 - *(Role, Company, dates — one line on impact)*
 - *(Education / certifications)*
 
-Want the full history? [Download my résumé]({{ site.author.resume | relative_url }}).
+Want the full history? [Connect with me on LinkedIn]({{ site.author.linkedin }}).

@@ -1,0 +1,30 @@
+{% comment %}
+  Renders a responsive 16:9 video embed for a project.
+  Supports YouTube and Loom out of the box. Pass:
+    - platform: "youtube" | "loom"
+    - id: the YouTube video ID, or the Loom share ID
+       (Loom share URL looks like https://www.loom.com/share/XXXXXXXX -> id is XXXXXXXX)
+{% endcomment %}
+{% if include.platform == "youtube" %}
+<div class="video-embed">
+  <iframe
+    src="https://www.youtube-nocookie.com/embed/{{ include.id }}"
+    title="{{ include.title | default: 'Project video walkthrough' }}"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen
+    loading="lazy">
+  </iframe>
+</div>
+{% elsif include.platform == "loom" %}
+<div class="video-embed">
+  <iframe
+    src="https://www.loom.com/embed/{{ include.id }}"
+    title="{{ include.title | default: 'Project video walkthrough' }}"
+    frameborder="0"
+    allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
+    allowfullscreen
+    loading="lazy">
+  </iframe>
+</div>
+{% endif %}

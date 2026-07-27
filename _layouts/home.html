@@ -1,0 +1,29 @@
+---
+layout: default
+---
+<section class="hero wrap">
+  <p class="hero__eyebrow">{{ site.tagline }}</p>
+  <h1>{{ page.headline | default: site.title }}</h1>
+  <div class="prose hero__intro">
+    {{ content }}
+  </div>
+  <div class="hero__ctas">
+    <a class="btn btn--primary" href="{{ '/projects/' | relative_url }}">See all projects</a>
+    <a class="btn" href="{{ '/about/' | relative_url }}">More about me</a>
+  </div>
+</section>
+
+{% assign featured = site.projects | where: "featured", true %}
+{% if featured.size == 0 %}{% assign featured = site.projects %}{% endif %}
+
+<section class="wrap section">
+  <div class="section__header">
+    <h2>Featured projects</h2>
+    <a href="{{ '/projects/' | relative_url }}">View all &rarr;</a>
+  </div>
+  <div class="project-grid">
+    {% for project in featured limit: 3 %}
+      {% include project-card.html project=project %}
+    {% endfor %}
+  </div>
+</section>

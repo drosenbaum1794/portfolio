@@ -1,0 +1,28 @@
+{% comment %}
+  Compact project card used on the homepage and projects grid.
+  Usage: {% include project-card.html project=some_project %}
+{% endcomment %}
+{% assign p = include.project %}
+<a class="project-card" href="{{ p.url | relative_url }}">
+  <div class="project-card__media">
+    {% if p.thumbnail %}
+      <img src="{{ p.thumbnail | relative_url }}" alt="" loading="lazy">
+    {% else %}
+      <div class="project-card__media project-card__media--placeholder" aria-hidden="true">
+        <span>{{ p.title | slice: 0, 1 }}</span>
+      </div>
+    {% endif %}
+    {% if p.video_platform and p.video_platform != "none" %}
+      <span class="project-card__badge">▶ Watch walkthrough</span>
+    {% endif %}
+  </div>
+  <div class="project-card__body">
+    <h3>{{ p.title }}</h3>
+    <p>{{ p.summary }}</p>
+    {% if p.tags %}
+    <ul class="tag-list">
+      {% for tag in p.tags limit: 4 %}<li>{{ tag }}</li>{% endfor %}
+    </ul>
+    {% endif %}
+  </div>
+</a>

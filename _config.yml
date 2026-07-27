@@ -1,0 +1,63 @@
+# ------------------------------------------------------------------
+# Site-wide settings. This is the first place to edit: your name,
+# tagline, and the links in the footer/nav all come from here.
+# ------------------------------------------------------------------
+
+title: "Your Name"
+tagline: "Enablement & Tech Education | AI-Forward Programs"
+description: >-
+  Portfolio of enablement, tech education, and AI-forward projects —
+  built for hiring managers who want to see the work, not just read about it.
+
+# Used to build absolute URLs (leave baseurl blank for a *.github.io user site,
+# or set it to "/your-repo-name" for a project site — see README).
+url: "https://yourusername.github.io"
+baseurl: "/portfolio"
+
+author:
+  name: "Your Name"
+  email: "you@example.com"
+  location: ""
+  linkedin: "https://linkedin.com/in/yourusername"
+  github: "https://github.com/yourusername"
+  resume: "/assets/files/resume.pdf"
+
+# ------------------------------------------------------------------
+# Collections — projects live here as individual markdown files.
+# See README.md for how to add a new one.
+# ------------------------------------------------------------------
+collections:
+  projects:
+    output: true
+    permalink: /projects/:path/
+
+defaults:
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+
+# ------------------------------------------------------------------
+# Build settings
+# ------------------------------------------------------------------
+markdown: kramdown
+sass:
+  style: compressed
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
+  - node_modules/

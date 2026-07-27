@@ -1,0 +1,44 @@
+---
+layout: default
+---
+<article class="wrap project">
+  <a class="back-link" href="{{ '/projects/' | relative_url }}">&larr; All projects</a>
+
+  <header class="project__header">
+    <h1>{{ page.title }}</h1>
+    {% if page.summary %}<p class="project__summary">{{ page.summary }}</p>{% endif %}
+
+    <dl class="project__meta">
+      {% if page.role %}<div><dt>Role</dt><dd>{{ page.role }}</dd></div>{% endif %}
+      {% if page.date %}<div><dt>Date</dt><dd>{{ page.date | date: "%B %Y" }}</dd></div>{% endif %}
+      {% if page.skills %}
+      <div>
+        <dt>Skills &amp; Tools</dt>
+        <dd>
+          <ul class="tag-list">
+            {% for skill in page.skills %}<li>{{ skill }}</li>{% endfor %}
+          </ul>
+        </dd>
+      </div>
+      {% endif %}
+    </dl>
+
+    {% if page.links %}
+    <div class="project__links">
+      {% for link in page.links %}
+        <a class="btn" href="{{ link.url }}" target="_blank" rel="noopener">{{ link.label }}</a>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </header>
+
+  {% if page.video_platform and page.video_platform != "none" and page.video_id %}
+  <div class="project__video">
+    {% include video-embed.html platform=page.video_platform id=page.video_id title=page.title %}
+  </div>
+  {% endif %}
+
+  <div class="prose">
+    {{ content }}
+  </div>
+</article>

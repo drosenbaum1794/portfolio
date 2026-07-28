@@ -22,3 +22,7 @@ Thumbs.db
 # Private drafts. This repo is PUBLIC, so anything not cleared for
 # publication lives here and never gets committed.
 _drafts-private/
+
+# Full-size photo originals. Kept locally as the source; the site ships
+# the optimized copies that sit alongside them.
+assets/images/_originals/

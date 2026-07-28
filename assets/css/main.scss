@@ -495,10 +495,11 @@ ul { margin: 0; padding: 0; list-style: none; }
 /* Optional page photo. Add `photo:` to a page's front matter to use it.
    Stacks above the text on narrow screens, sits to the right on wide ones. */
 .page__photo { margin: 0 0 28px; max-width: 280px; }
+/* Natural shape by default so landscape and portrait both work. A page can
+   opt into a crop with photo_ratio in its front matter. */
 .page__photo img {
   width: 100%;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
+  height: auto;
   border-radius: var(--radius);
   box-shadow: var(--shadow-md);
 }

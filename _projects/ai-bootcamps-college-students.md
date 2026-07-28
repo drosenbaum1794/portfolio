@@ -3,8 +3,8 @@ title: "AI bootcamps for college students"
 summary: "A multi-year program pairing college students with real companies on eight-week applied AI projects. Over a thousand learners came through it."
 role: "Curriculum design and facilitation"
 period: "Multi-year program"
-order: 3
-featured: true
+order: 4
+featured: false
 tags: [Education, Curriculum, Partnerships]
 skills: [Curriculum Design, Facilitation, Program Management, Partner Sourcing]
 video_platform: none   # set to youtube or loom once recorded

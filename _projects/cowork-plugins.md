@@ -3,7 +3,7 @@ title: "Claude Code and Cowork plugins"
 summary: "Turning repeatable judgment into tooling non-technical people can run themselves."
 role: "Builder"
 period: "Ongoing"
-order: 4
+order: 5
 featured: false
 tags: [Internal Tooling, AI Agents, Automation]
 skills: [Claude Code, Cowork, Plugin Development, Evaluation Design]

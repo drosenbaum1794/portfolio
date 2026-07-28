@@ -7,7 +7,8 @@ order: 1
 featured: true
 tags: [AI Agents, Education, Adoption]
 skills: [GPT Trainer, Slack API, Python, pandas, matplotlib]
-video_platform: none
+video_platform: none   # set to youtube or loom once recorded
+video_id: ""           # paste the YouTube or Loom ID here
 ---
 ## The problem
 

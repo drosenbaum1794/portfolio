@@ -36,6 +36,10 @@ layout: default
   <div class="project__video">
     {% include video-embed.html platform=page.video_platform id=page.video_id title=page.title %}
   </div>
+  {% elsif site.show_video_placeholders %}
+  <div class="project__video">
+    {% include video-placeholder.html %}
+  </div>
   {% endif %}
 
   <div class="prose">

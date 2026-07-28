@@ -7,7 +7,8 @@ order: 2
 featured: true
 tags: [Company Building, AI Education, Partnerships]
 skills: [Curriculum Design, Facilitation, Partner Development, AI Strategy]
-video_platform: none
+video_platform: none   # set to youtube or loom once recorded
+video_id: ""           # paste the YouTube or Loom ID here
 links:
   - label: "synapticlabs.ai"
     url: "https://synapticlabs.ai"

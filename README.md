@@ -83,7 +83,13 @@ files bloat every future clone. Host externally and embed:
 1. Copy the share URL, `loom.com/share/XXXXXXXXXXXX`.
 2. Set `video_platform: loom` and `video_id: "XXXXXXXXXXXX"`.
 
-**No video yet?** `video_platform: none`. The page just omits the video block.
+**No video yet?** Leave `video_platform: none`. The project page shows a
+"Video walkthrough coming soon" slot in the spot the video will occupy, so the
+page never looks like it is missing something.
+
+To hide those slots on every project at once, set `show_video_placeholders:
+false` in `_config.yml`. Projects that do have a video are unaffected either
+way.
 
 ## Voice rules for site copy
 

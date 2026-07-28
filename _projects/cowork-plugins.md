@@ -7,7 +7,8 @@ order: 4
 featured: false
 tags: [Internal Tooling, AI Agents, Automation]
 skills: [Claude Code, Cowork, Plugin Development]
-video_platform: none
+video_platform: none   # set to youtube or loom once recorded
+video_id: ""           # paste the YouTube or Loom ID here
 ---
 I build Claude Code and Cowork plugins to turn repeatable judgment into tooling
 non-technical people can run themselves.

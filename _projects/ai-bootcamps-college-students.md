@@ -7,7 +7,8 @@ order: 3
 featured: true
 tags: [Education, Curriculum, Partnerships]
 skills: [Curriculum Design, Facilitation, Program Management]
-video_platform: none
+video_platform: none   # set to youtube or loom once recorded
+video_id: ""           # paste the YouTube or Loom ID here
 ---
 ## What it was
 

@@ -2,14 +2,25 @@
 layout: default
 ---
 <section class="hero wrap">
-  <p class="hero__eyebrow">{{ site.tagline }}</p>
-  <h1>{{ page.headline | default: site.title }}</h1>
-  <div class="prose hero__intro">
-    {{ content }}
-  </div>
-  <div class="hero__ctas">
-    <a class="btn btn--primary" href="{{ '/projects/' | relative_url }}">See all projects</a>
-    <a class="btn" href="{{ '/about/' | relative_url }}">More about me</a>
+  <div class="hero__inner{% if site.author.photo %} hero__inner--with-photo{% endif %}">
+    <div class="hero__text">
+      <p class="hero__eyebrow">{{ site.tagline }}</p>
+      <h1>{{ page.headline | default: site.title }}</h1>
+      <div class="prose hero__intro">
+        {{ content }}
+      </div>
+      <div class="hero__ctas">
+        <a class="btn btn--primary" href="{{ '/projects/' | relative_url }}">See all projects</a>
+        <a class="btn" href="{{ '/about/' | relative_url }}">More about me</a>
+      </div>
+    </div>
+
+    {% if site.author.photo %}
+    <div class="hero__portrait">
+      <img src="{{ site.author.photo | relative_url }}"
+           alt="{{ site.author.photo_alt | default: site.author.name }}">
+    </div>
+    {% endif %}
   </div>
 </section>
 

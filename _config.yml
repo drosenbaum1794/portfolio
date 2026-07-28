@@ -23,6 +23,10 @@ author:
   email: "drosenbaum1794@gmail.com"
   location: "Beverly, MA"
   linkedin: "https://www.linkedin.com/in/daniel-rosenbaum-aa283b188/"
+  # Homepage portrait. Drop the file in assets/images/ and uncomment.
+  # Nothing renders and no space is reserved until this is set.
+  # photo: "/assets/images/dan-hero.jpg"
+  # photo_alt: "Dan Rosenbaum"
 
 # ------------------------------------------------------------------
 # Collections — projects live here as individual markdown files.

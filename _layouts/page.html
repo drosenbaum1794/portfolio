@@ -6,7 +6,18 @@ layout: default
     <h1>{{ page.title }}</h1>
     {% if page.subtitle %}<p class="page__subtitle">{{ page.subtitle }}</p>{% endif %}
   </header>
-  <div class="prose">
-    {{ content }}
+
+  <div class="page__body{% if page.photo %} page__body--with-photo{% endif %}">
+    {% if page.photo %}
+    <figure class="page__photo">
+      <img src="{{ page.photo | relative_url }}"
+           alt="{{ page.photo_alt | default: site.author.name }}">
+      {% if page.photo_caption %}<figcaption>{{ page.photo_caption }}</figcaption>{% endif %}
+    </figure>
+    {% endif %}
+
+    <div class="prose">
+      {{ content }}
+    </div>
   </div>
 </section>

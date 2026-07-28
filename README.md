@@ -92,6 +92,26 @@ appears automatically.
 If you ever want the opposite, a visible "coming soon" slot holding the space,
 set `show_video_placeholders: true` in `_config.yml`. It is off by default.
 
+## Adding photos of yourself
+
+Three slots are wired up and waiting. Each is one commented-out line.
+
+| Where | File to edit |
+| :--- | :--- |
+| Homepage, beside the headline | `_config.yml`, `photo:` under `author:` |
+| About page, beside the bio | `about.md` front matter |
+| Contact page | `contact.md` front matter |
+
+Drop the image in `assets/images/`, uncomment the line, push. Until then
+nothing renders and no blank space is reserved, so the pages look finished
+either way.
+
+The slots crop to 4:5 portrait, so a vertical or square photo survives better
+than a wide one. More detail in `assets/images/README.md`.
+
+For photos anywhere else, plain markdown works in any page or project body:
+`![description](/assets/images/file.jpg)`.
+
 ## Adding numbers, stat tiles, and charts
 
 Both are optional front matter blocks on any project. Neither needs code.

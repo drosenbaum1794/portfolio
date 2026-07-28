@@ -135,6 +135,47 @@ ul { margin: 0; padding: 0; list-style: none; }
    4. Hero
    ========================================================================== */
 .hero { padding: 72px 24px 48px; }
+.hero__inner { display: block; }
+.hero__text { min-width: 0; }
+
+/* Portrait sits beside the intro on wide screens and above it on narrow
+   ones. Only rendered when author.photo is set in _config.yml. */
+.hero__inner--with-photo {
+  display: flex;
+  flex-direction: column;
+}
+.hero__inner--with-photo .hero__portrait {
+  /* Above the headline on narrow screens rather than orphaned below the
+     buttons. The desktop grid below overrides this. */
+  order: -1;
+}
+.hero__portrait {
+  margin-bottom: 28px;
+  max-width: 260px;
+}
+.hero__portrait img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+}
+@media (min-width: 800px) {
+  .hero__inner--with-photo {
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    gap: 48px;
+    align-items: center;
+  }
+  .hero__inner--with-photo .hero__text { grid-column: 1; grid-row: 1; }
+  .hero__inner--with-photo .hero__portrait {
+    grid-column: 2;
+    grid-row: 1;
+    margin-bottom: 0;
+    max-width: none;
+  }
+}
+
 .hero__eyebrow {
   color: var(--color-accent);
   font-weight: 700;
@@ -450,6 +491,40 @@ ul { margin: 0; padding: 0; list-style: none; }
    ========================================================================== */
 .page { padding: 48px 24px 72px; }
 .page__subtitle { color: var(--color-ink-soft); font-size: 1.1rem; }
+
+/* Optional page photo. Add `photo:` to a page's front matter to use it.
+   Stacks above the text on narrow screens, sits to the right on wide ones. */
+.page__photo { margin: 0 0 28px; max-width: 280px; }
+.page__photo img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+}
+.page__photo figcaption {
+  margin-top: 10px;
+  font-size: 0.85rem;
+  line-height: 1.45;
+  color: var(--color-ink-soft);
+}
+@media (min-width: 760px) {
+  .page__body--with-photo {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 280px;
+    gap: 48px;
+    align-items: start;
+  }
+  .page__body--with-photo .prose { grid-column: 1; grid-row: 1; }
+  .page__body--with-photo .page__photo {
+    grid-column: 2;
+    grid-row: 1;
+    margin-bottom: 0;
+    max-width: none;
+    position: sticky;
+    top: 92px;
+  }
+}
 
 .site-footer {
   border-top: 1px solid var(--color-border);

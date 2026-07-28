@@ -13,8 +13,8 @@ layout: default
   </div>
 </section>
 
-{% assign featured = site.projects | where: "featured", true %}
-{% if featured.size == 0 %}{% assign featured = site.projects %}{% endif %}
+{% assign featured = site.projects | where: "featured", true | sort: "order" %}
+{% if featured.size == 0 %}{% assign featured = site.projects | sort: "order" %}{% endif %}
 
 <section class="wrap section">
   <div class="section__header">

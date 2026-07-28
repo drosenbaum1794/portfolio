@@ -18,3 +18,7 @@ Thumbs.db
 
 # Claude Code local settings
 .claude/
+
+# Private drafts. This repo is PUBLIC, so anything not cleared for
+# publication lives here and never gets committed.
+_drafts-private/

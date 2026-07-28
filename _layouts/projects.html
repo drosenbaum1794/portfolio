@@ -10,7 +10,7 @@ layout: default
 
 <section class="wrap section">
   <div class="project-grid">
-    {% assign sorted_projects = site.projects | sort: "date" | reverse %}
+    {% assign sorted_projects = site.projects | sort: "order" %}
     {% for project in sorted_projects %}
       {% include project-card.html project=project %}
     {% endfor %}

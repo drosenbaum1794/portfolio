@@ -3,21 +3,21 @@
 # tagline, and the links in the footer/nav all come from here.
 # ------------------------------------------------------------------
 
-title: "Your Name"
-tagline: "Enablement & Tech Education | AI-Forward Programs"
+title: "Dan Rosenbaum"
+tagline: "AI enablement, education, and tools that get used"
 description: >-
-  Portfolio of enablement, tech education, and AI-forward projects —
-  built for hiring managers who want to see the work, not just read about it.
+  I build AI tools people actually adopt, and I measure whether they keep
+  using them.
 
 # Used to build absolute URLs (leave baseurl blank for a *.github.io user site,
-# or set it to "/your-repo-name" for a project site — see README).
-url: "https://yourusername.github.io"
+# or set it to "/your-repo-name" for a project site. See README).
+url: "https://drosenbaum1794.github.io"
 baseurl: "/portfolio"
 
 author:
-  name: "Your Name"
+  name: "Dan Rosenbaum"
   email: "drosenbaum1794@gmail.com"
-  location: ""
+  location: "Beverly, MA"
   linkedin: "https://www.linkedin.com/in/daniel-rosenbaum-aa283b188/"
 
 # ------------------------------------------------------------------

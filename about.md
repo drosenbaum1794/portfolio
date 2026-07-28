@@ -1,36 +1,53 @@
 ---
 layout: page
 title: About
-subtitle: "A little about my background and how I like to work."
+subtitle: "The software is never the hard part. The hard part is getting people to trust a new way of working."
 permalink: /about/
 ---
-*(Replace this with your real bio — a few short paragraphs work better than a
-wall of text. Hiring managers skim.)*
+I started my career as a mental health counselor, splitting my time between an
+inpatient psychiatric unit and an inpatient eating disorders unit. A bit of an
+odd start to a career in technology, but stay with me here.
 
-I'm a [your title / focus] with a background in [prior roles / domains]. I care
-about making complex tools and processes approachable — turning "here's the
-documentation" into "here's how you'll actually use this on Tuesday."
+From there I spent two and a half years at MEDITECH, flying around the country
+teaching hospital administrators to work inside new electronic health record
+systems. The software always worked. The hard part was walking onto a unit
+where people had done things one way for a long time and getting them to trust
+something new, under real compliance constraints.
 
-Lately I've been focused on AI-forward enablement: helping teams adopt AI
-tools with real workflows, not just demos.
+That turned out to be the whole job, everywhere I have gone since. At HubSpot I
+have spent nearly seven years across customer onboarding, strategic consulting,
+and partner development. In the middle of that I co-founded Synaptic Labs, an
+AI education and deployment company, because I had seen what technology could
+do to transform lives and AI was the highest leverage version of that I had
+ever seen.
 
-## What I'm looking for
+These days I build AI tools and teach people to use them. I care less about
+whether something launches well and more about whether anyone is still using it
+in three months.
 
-I'm exploring roles in **enablement**, **technical education**, and
-**AI-forward** programs — places where I can build training, documentation,
-and tooling that helps people do their best work.
+## What I'm interested in
 
-## Skills & tools
+Conversations about AI enablement, adoption, and education. The work I keep
+coming back to is finding the pattern behind a thousand similar problems and
+solving it once, at scale.
 
-- Enablement & onboarding program design
-- Technical writing & documentation systems
-- AI tool adoption & prompt/workflow design
-- *(add your specific tools: LMS platforms, Notion, Figma, specific AI products, etc.)*
+## The short version
 
-## Background
+- **Location:** Beverly, MA, on the North Shore of Boston
+- **Now:** Senior Partner Development Manager at HubSpot, where I develop and
+  enable a portfolio of about 25 partners
+- **Education:** University of Massachusetts Lowell, 2012 to 2016. Bachelor's
+  degree, double major in Psychology and Criminal Justice
 
-- *(Role, Company, dates — one line on impact)*
-- *(Role, Company, dates — one line on impact)*
-- *(Education / certifications)*
+## Career timeline
+
+| Dates | Role | Organization |
+| :--- | :--- | :--- |
+| Feb 2024 – present | Senior Partner Development Manager | HubSpot |
+| Apr 2023 – Jan 2026 | Co-founder | Synaptic Labs |
+| Aug 2022 – Feb 2024 | Strategic Channel Consultant | HubSpot |
+| Sep 2019 – Aug 2022 | Senior Customer Onboarding Specialist | HubSpot |
+| Feb 2017 – Sep 2019 | Implementation Specialist | MEDITECH |
+| Jan 2015 – Feb 2017 | Mental Health Counselor | Walden Behavioral Care |
 
 Want the full history? [Connect with me on LinkedIn]({{ site.author.linkedin }}).

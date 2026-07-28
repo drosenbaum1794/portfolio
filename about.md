@@ -3,10 +3,8 @@ layout: page
 title: About
 subtitle: "The software is never the hard part. The hard part is getting people to trust a new way of working."
 permalink: /about/
-# Drop a photo in assets/images/ and uncomment these to show it beside the bio.
-# photo: "/assets/images/dan-about.jpg"
-# photo_alt: "Dan Rosenbaum"
-# photo_caption: "Optional caption."
+photo: "/assets/images/dan-about.jpg"
+photo_alt: "Dan Rosenbaum pulling a playful face, hands raised beside his head"
 ---
 I started my career as a mental health counselor, splitting my time between an
 inpatient psychiatric unit and an inpatient eating disorders unit. A bit of an

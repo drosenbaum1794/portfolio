@@ -14,9 +14,9 @@ description: >-
 url: "https://drosenbaum1794.github.io"
 baseurl: "/portfolio"
 
-# Projects without a video show a "coming soon" slot on their page.
-# Set to false to hide every one of those slots at once.
-show_video_placeholders: true
+# When true, projects without a video show a "coming soon" slot on their page.
+# Off by default. Projects that do have a video always show it either way.
+show_video_placeholders: false
 
 author:
   name: "Dan Rosenbaum"

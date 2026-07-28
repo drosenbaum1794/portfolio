@@ -1,0 +1,49 @@
+{% comment %}
+  Horizontal bar chart, plain HTML and CSS. No JavaScript, no libraries.
+
+  Driven by a `chart:` block in the project's front matter:
+
+    chart:
+      title: "Resolution rate, tagged versus estimated"
+      note: "Optional line of context under the chart."
+      max: 100                  # value that equals a full-width bar
+      bars:
+        - label: "Auto-tagged"
+          value: 31             # number, used for the bar width
+          display: "31%"        # what the reader sees. Any string
+          muted: true           # optional. Grays the bar for de-emphasis
+        - label: "Estimated effective"
+          value: 60             # solid portion starts here
+          value_to: 70          # optional. Draws a lighter range extension
+          display: "60 to 70%"
+
+  Every bar is directly labeled, so the color is never the only thing
+  carrying meaning. One accent hue plus gray, no categorical palette.
+{% endcomment %}
+{% assign c = include.chart %}
+{% if c and c.bars %}
+{% assign max = c.max | default: 100 %}
+<figure class="chart">
+  {% if c.title %}<figcaption class="chart__title">{{ c.title }}</figcaption>{% endif %}
+  <div class="chart__bars">
+    {% for bar in c.bars %}
+    {% assign pct = bar.value | times: 100.0 | divided_by: max %}
+    <div class="bar-row">
+      <div class="bar-row__label">{{ bar.label }}</div>
+      <div class="bar-row__body">
+        <div class="bar-row__track">
+          <div class="bar-row__fill{% if bar.muted %} bar-row__fill--muted{% endif %}" style="width: {{ pct }}%;"></div>
+          {% if bar.value_to %}
+          {% assign pct_to = bar.value_to | times: 100.0 | divided_by: max %}
+          {% assign pct_range = pct_to | minus: pct %}
+          <div class="bar-row__fill bar-row__fill--range" style="left: {{ pct }}%; width: {{ pct_range }}%;"></div>
+          {% endif %}
+        </div>
+        <span class="bar-row__value">{{ bar.display }}</span>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  {% if c.note %}<p class="chart__note">{{ c.note }}</p>{% endif %}
+</figure>
+{% endif %}

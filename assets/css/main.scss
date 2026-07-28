@@ -334,6 +334,111 @@ ul { margin: 0; padding: 0; list-style: none; }
   max-width: 34ch;
 }
 
+/* ==========================================================================
+   7b. Data display: KPI tiles and bar charts
+   One accent hue plus a neutral gray. Every value is directly labeled, so
+   color never carries meaning on its own.
+   ========================================================================== */
+.stat-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1px;
+  margin: 32px 0;
+  background: var(--color-border);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.stat-tile {
+  background: #fff;
+  padding: 20px 22px;
+}
+.stat-tile__value {
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--color-ink);
+  margin-bottom: 6px;
+}
+.stat-tile__label {
+  font-size: 0.8rem;
+  line-height: 1.35;
+  color: var(--color-ink-soft);
+}
+
+.chart {
+  margin: 32px 0;
+  padding: 22px 24px 20px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: #fff;
+}
+.chart__title {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--color-ink);
+  margin-bottom: 18px;
+}
+.chart__bars { display: flex; flex-direction: column; gap: 16px; }
+.chart__note {
+  margin: 18px 0 0;
+  padding-top: 14px;
+  border-top: 1px solid var(--color-border);
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--color-ink-soft);
+}
+
+.bar-row__label {
+  font-size: 0.85rem;
+  color: var(--color-ink-soft);
+  margin-bottom: 6px;
+}
+.bar-row__body {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.bar-row__track {
+  position: relative;
+  flex: 1;
+  height: 22px;
+  /* Recessive baseline rather than a full grid. */
+  border-left: 1px solid var(--color-border);
+}
+.bar-row__fill {
+  position: absolute;
+  left: 0;
+  height: 100%;
+  background: var(--color-accent);
+  /* Rounded at the data end, square at the baseline. */
+  border-radius: 0 4px 4px 0;
+  min-width: 2px;
+}
+.bar-row__fill--muted { background: #c9c3b6; }
+.bar-row__fill--range {
+  background: var(--color-accent);
+  opacity: 0.3;
+  border-radius: 0 4px 4px 0;
+}
+/* Values sit outside the bar so they are always legible, whatever the
+   fill width or color. */
+.bar-row__value {
+  flex-shrink: 0;
+  text-align: right;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-ink);
+  white-space: nowrap;
+}
+
+@media (max-width: 520px) {
+  .stat-tile { padding: 16px 18px; }
+  .stat-tile__value { font-size: 1.5rem; }
+  .chart { padding: 18px 18px 16px; }
+}
+
 .prose { max-width: 720px; }
 .prose h2 { margin-top: 1.6em; }
 .prose ul { list-style: disc; padding-left: 1.4em; margin-bottom: 1em; }

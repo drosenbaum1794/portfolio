@@ -92,6 +92,49 @@ appears automatically.
 If you ever want the opposite, a visible "coming soon" slot holding the space,
 set `show_video_placeholders: true` in `_config.yml`. It is off by default.
 
+## Adding numbers, stat tiles, and charts
+
+Both are optional front matter blocks on any project. Neither needs code.
+
+**A row of headline numbers:**
+
+```yaml
+stats:
+  - value: "~1,900"          # any string, so "180+" and "60 to 70%" work
+    label: "Queries handled"
+```
+
+Four tiles or fewer reads best.
+
+**A bar chart:**
+
+```yaml
+chart:
+  title: "Resolution rate, auto-tagged versus estimated effective"
+  max: 100                   # the value that equals a full-width bar
+  bars:
+    - label: "Auto-tagged in production"
+      value: 31              # number, sets the bar width
+      display: "31%"         # what the reader sees
+      muted: true            # optional, grays the bar as context
+    - label: "Estimated effective"
+      value: 60
+      value_to: 70           # optional, draws a lighter range extension
+      display: "60 to 70%"
+  note: "Optional line of context under the chart."
+```
+
+Rules worth keeping:
+
+- One accent color plus gray. `muted: true` marks the context bar, color marks
+  the point. Do not add more colors, since a reader with color blindness would
+  lose the distinction.
+- Every bar shows its own value, so the chart never depends on color alone.
+- Use `value_to` for estimates and ranges rather than picking a midpoint and
+  presenting it as exact.
+- Only chart numbers you can source. A chart implies a precision that prose
+  does not.
+
 ## Voice rules for site copy
 
 From the content package, worth keeping in front of you when editing:

@@ -9,6 +9,31 @@ tags: [AI Agents, Education, Adoption]
 skills: [GPT Trainer, Slack API, Python, pandas, matplotlib, Evaluation Design]
 video_platform: none   # set to youtube or loom once recorded
 video_id: ""           # paste the YouTube or Loom ID here
+stats:
+  - value: "~1,900"
+    label: "Queries handled"
+  - value: "969"
+    label: "Unique conversations"
+  - value: "180+"
+    label: "Hours of support deflected"
+  - value: "60 to 70%"
+    label: "Estimated resolution rate"
+chart:
+  title: "Resolution rate, auto-tagged versus estimated effective"
+  max: 100
+  bars:
+    - label: "Auto-tagged in production"
+      value: 31
+      display: "31%"
+      muted: true
+    - label: "Estimated effective, corrected for under-tagging"
+      value: 60
+      value_to: 70
+      display: "60 to 70%"
+  note: >-
+    "Problem Solved" had to be applied by hand, so most learners who got what
+    they needed never triggered the tag. The lighter section shows the range,
+    not a single point estimate.
 ---
 ## The problem
 

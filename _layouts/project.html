@@ -32,6 +32,9 @@ layout: default
     {% endif %}
   </header>
 
+  {% if page.stats %}{% include stat-row.html stats=page.stats %}{% endif %}
+  {% if page.chart %}{% include chart-bars.html chart=page.chart %}{% endif %}
+
   {% if page.video_platform and page.video_platform != "none" and page.video_id %}
   <div class="project__video">
     {% include video-embed.html platform=page.video_platform id=page.video_id title=page.title %}

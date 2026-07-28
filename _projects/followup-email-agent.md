@@ -9,6 +9,33 @@ tags: [AI Agents, Adoption, Go-to-Market]
 skills: [Glean Agent Builder, Python, pandas, matplotlib]
 video_platform: none   # set to youtube or loom once recorded
 video_id: ""           # paste the YouTube or Loom ID here
+stats:
+  - value: "190"
+    label: "People who tried it"
+  - value: "959"
+    label: "Total runs"
+  - value: "28"
+    label: "Monthly active users"
+  - value: "12"
+    label: "Weekly active users"
+chart:
+  title: "From trying it once to using it every week"
+  max: 190
+  bars:
+    - label: "Tried it at least once"
+      value: 190
+      display: "190"
+      muted: true
+    - label: "Still active monthly"
+      value: 28
+      display: "28"
+    - label: "Still active weekly"
+      value: 12
+      display: "12"
+  note: >-
+    The drop is the interesting part. Nobody was told to use this, so the
+    people still running it every week are running it because it beats writing
+    the email themselves.
 ---
 ## The problem
 

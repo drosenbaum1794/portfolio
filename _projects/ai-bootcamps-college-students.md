@@ -9,6 +9,15 @@ tags: [Education, Curriculum, Partnerships]
 skills: [Curriculum Design, Facilitation, Program Management, Partner Sourcing]
 video_platform: none   # set to youtube or loom once recorded
 video_id: ""           # paste the YouTube or Loom ID here
+stats:
+  - value: "Over 1,000"
+    label: "Learners through the program"
+  - value: "200 to 300"
+    label: "Students per cohort"
+  - value: "150 to 250"
+    label: "Companies per cohort"
+  - value: "8 weeks"
+    label: "Training plus a real client project"
 ---
 ## What it was
 

@@ -1,0 +1,21 @@
+{% comment %}
+  KPI row of headline numbers for a project.
+  Driven by a `stats:` list in the project's front matter:
+
+    stats:
+      - value: "~1,900"
+        label: "Queries handled"
+
+  Four or fewer reads best. Values are plain strings, so ranges and
+  approximations ("60 to 70%", "180+") work without special handling.
+{% endcomment %}
+{% if include.stats %}
+<div class="stat-row">
+  {% for stat in include.stats %}
+  <div class="stat-tile">
+    <div class="stat-tile__value">{{ stat.value }}</div>
+    <div class="stat-tile__label">{{ stat.label }}</div>
+  </div>
+  {% endfor %}
+</div>
+{% endif %}

@@ -7,16 +7,15 @@ order: 2
 featured: true
 tags: [Company Building, AI Education, Partnerships]
 skills: [Curriculum Design, Facilitation, Go-to-Market, Partner Development, AI Strategy]
+logo: /assets/images/synaptic-labs-logo.png
+logo_alt: "Synaptic Labs logo"
+logo_url: "https://synapticlabs.ai"
 video_platform: none   # set to youtube or loom once recorded
 video_id: ""           # paste the YouTube or Loom ID here
 links:
   - label: "synapticlabs.ai"
     url: "https://synapticlabs.ai"
 ---
-<a class="brand-logo" href="https://synapticlabs.ai" target="_blank" rel="noopener">
-  <img src="{{ '/assets/images/synaptic-labs-logo.png' | relative_url }}" alt="Synaptic Labs logo">
-</a>
-
 ## What it was
 
 An AI education and deployment company focused on making AI practical and

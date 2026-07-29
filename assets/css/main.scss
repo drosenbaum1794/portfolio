@@ -486,12 +486,14 @@ ul { margin: 0; padding: 0; list-style: none; }
 .prose ul li { margin-bottom: 0.4em; }
 .prose img { border-radius: var(--radius); margin: 1.2em 0; }
 
-/* A clickable brand mark inside a project body. Logos are usually transparent
-   PNGs, so no radius and no shadow. Width is capped here rather than in the
-   markdown so every logo on the site lands the same size. */
-.prose .brand-logo { display: inline-block; max-width: 200px; }
-.prose .brand-logo img { border-radius: 0; width: 100%; height: auto; }
-.prose .brand-logo:hover { opacity: 0.8; text-decoration: none; }
+/* Optional project logo. Add `logo:` to a project's front matter, plus
+   `logo_url:` to make it clickable. Stacks above the text on narrow screens,
+   sits to the right and follows the scroll on wide ones. Logos are usually
+   transparent PNGs, so no radius and no shadow. */
+.project__logo { margin: 0 0 28px; max-width: 180px; }
+.project__logo img { width: 100%; height: auto; }
+.project__logo a { display: block; }
+.project__logo a:hover { opacity: 0.75; }
 
 /* ==========================================================================
    8. Generic page (about/contact) & footer
@@ -525,6 +527,24 @@ ul { margin: 0; padding: 0; list-style: none; }
   }
   .page__body--with-photo .prose { grid-column: 1; grid-row: 1; }
   .page__body--with-photo .page__photo {
+    grid-column: 2;
+    grid-row: 1;
+    margin-bottom: 0;
+    max-width: none;
+    position: sticky;
+    top: 92px;
+  }
+
+  /* Same treatment for a project logo, in a narrower column since a logo
+     does not need as much room as a portrait. */
+  .project__body--with-logo {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 180px;
+    gap: 48px;
+    align-items: start;
+  }
+  .project__body--with-logo .prose { grid-column: 1; grid-row: 1; }
+  .project__body--with-logo .project__logo {
     grid-column: 2;
     grid-row: 1;
     margin-bottom: 0;

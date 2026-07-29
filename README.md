@@ -48,6 +48,9 @@ featured: true          # homepage shows the first three featured, by order
 tags: [AI Agents, Adoption]           # short labels on the card
 skills: [Python, Slack API]           # shown on the detail page
 thumbnail: /assets/images/projects/my-thumb.jpg   # optional
+logo: /assets/images/my-logo.png      # optional, see below
+logo_alt: "Company logo"
+logo_url: "https://example.com"       # omit to make the logo non-clickable
 video_platform: none    # youtube | loom | none
 video_id: "XXXXXXXXXXX" # only needed if platform is youtube or loom
 links:
@@ -109,8 +112,31 @@ either way.
 The slots crop to 4:5 portrait, so a vertical or square photo survives better
 than a wide one. More detail in `assets/images/README.md`.
 
-For photos anywhere else, plain markdown works in any page or project body:
-`![description](/assets/images/file.jpg)`.
+For photos anywhere else, markdown works in any page or project body, but the
+path has to go through `relative_url` or it breaks. This site is served from
+`/portfolio/`, so a bare `/assets/...` path resolves to the domain root and
+404s:
+
+```
+![description]({{ '/assets/images/file.jpg' | relative_url }})
+```
+
+## Adding a company logo to a project
+
+Drop the image in `assets/images/` and add three lines of front matter:
+
+```yaml
+logo: /assets/images/my-logo.png
+logo_alt: "Company logo"
+logo_url: "https://example.com"   # omit this line and the logo is not a link
+```
+
+It renders to the right of the case study and follows you as you scroll, the
+same as the About page photo. On narrow screens it stacks above the text
+instead. Capped at 180px wide, so upload at whatever size you have.
+
+Transparent PNGs work best. The site background is off-white, so a logo with a
+baked-in white rectangle will show its edges.
 
 ## Adding numbers, stat tiles, and charts
 

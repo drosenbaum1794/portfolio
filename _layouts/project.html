@@ -45,7 +45,25 @@ layout: default
   </div>
   {% endif %}
 
-  <div class="prose">
-    {{ content }}
+  <div class="project__body{% if page.logo %} project__body--with-logo{% endif %}">
+    {% if page.logo %}
+    {% comment %}
+      Optional logo. Sits to the right of the body and follows the scroll on
+      wide screens. Add logo_url to make it clickable.
+    {% endcomment %}
+    <aside class="project__logo">
+      {% if page.logo_url %}
+      <a href="{{ page.logo_url }}" target="_blank" rel="noopener">
+        <img src="{{ page.logo | relative_url }}" alt="{{ page.logo_alt | default: page.title }}">
+      </a>
+      {% else %}
+      <img src="{{ page.logo | relative_url }}" alt="{{ page.logo_alt | default: page.title }}">
+      {% endif %}
+    </aside>
+    {% endif %}
+
+    <div class="prose">
+      {{ content }}
+    </div>
   </div>
 </article>

@@ -1,6 +1,6 @@
 ---
 title: "Synaptic Labs"
-summary: "Co-founded an AI education and deployment company, grew it from zero revenue to multiple six figures, then handed it to my co-founder to focus on building."
+summary: "Co-founded an AI education and deployment company with my brother, grew it from zero revenue to multiple six figures, then handed it off fully in January 2026."
 role: "Co-founder"
 period: "April 2023 to January 2026"
 order: 2
@@ -17,13 +17,13 @@ links:
 
 An AI education and deployment company focused on making AI practical and
 accessible. I co-founded it in April 2023 with my brother and handed it off to
-him in January 2026.
+him fully in January 2026.
 
-I came in from the go-to-market side. I was at HubSpot, so I understood how to
-take a product to market, run a CRM, build the website, and handle the
-marketing and sales end. Early on that was most of my job: go-to-market
-mapping, the first education offerings, and standing the whole business up on a
-platform that could carry all of it.
+I came in from the go-to-market side. I was full-time at HubSpot, so I
+understood how to take a product to market, run a CRM, build the website, and
+handle the marketing and sales end. Early on that was most of my job: product
+market fit mapping, running and selling the first education offerings, and
+standing the whole business up on the HubSpot platform.
 
 ## What I did
 
@@ -44,31 +44,32 @@ people about what their day actually looked like and where they were stuck.
 That program is strictly educational, so delivery was standard enablement on
 whatever the team was already using, usually Claude or ChatGPT.
 
-We ended each engagement with a capstone. Workshop style, the team builds
-something real rather than watching a demo. Then we came back, talked through
-what they had built, and gave direction on making it better.
+We ended each engagement with a capstone project. Workshop style, the team
+builds something real rather than watching a demo. Then we came back, talked
+through what they had built, and gave direction on making it better.
 
-A good number of those turned into retainer work, which is where the more
-interesting version of the job happened. With more time we could interview
-deeply, then find the people who were naturally inclined to build and enable
-them specifically to lead their own departments.
+A good number of those turned into retainer work. With these we had more time
+where we could interview more deeply, then find the people who were naturally
+inclined to build and enable them specifically to lead their own departments.
 
 That is really what an AI Center of Excellence is. It starts with internal
 champions, executive buy-in behind them, and clear guardrails covering ethics
-and policy. The training is the easy part.
+and policy.
 
 ## Why I handed it off
 
-It was always my brother's company. He brought me the idea, and I helped get it
-standing on its own two feet.
+I always felt like it was my brother's baby. He brought me the idea initially,
+and I helped get it standing on its own two feet.
 
-By the end of my involvement the business was running without needing me in it.
-We had good people delivering the work, my brother was the AI developer with
-other developers and a community manager around him, and I had been carrying a
-day job alongside it for three years. We were not making enough for both of us
-to go full time, but we were making enough for him to. Handing it over let him
-reinvest what had been my share.
+By the end of my involvement the business was running without really needing me
+in it. We had good people delivering the work, my brother had other developers
+and a community manager around him, and I had been carrying a day job alongside
+it for three years. We weren't making enough for both of us to go full time,
+but we were making enough for him to. Handing it over let him reinvest my share
+of the profits back into the business.
 
-The honest read is that my value to it had thinned out. I had done the thing I
-was there to do, and the part I found most engaging was always the education
-side rather than running the company. I still advise him for free.
+I really realized that I like to dig in with a team longer term and take them to
+the next level of their AI maturity, with the ultimate goal of creating
+sustainable internal practices that persist with or without me. I had done the
+thing I set out to do, and I felt it was time for me to take my skills and apply
+them elsewhere.

@@ -486,6 +486,13 @@ ul { margin: 0; padding: 0; list-style: none; }
 .prose ul li { margin-bottom: 0.4em; }
 .prose img { border-radius: var(--radius); margin: 1.2em 0; }
 
+/* A clickable brand mark inside a project body. Logos are usually transparent
+   PNGs, so no radius and no shadow. Width is capped here rather than in the
+   markdown so every logo on the site lands the same size. */
+.prose .brand-logo { display: inline-block; max-width: 200px; }
+.prose .brand-logo img { border-radius: 0; width: 100%; height: auto; }
+.prose .brand-logo:hover { opacity: 0.8; text-decoration: none; }
+
 /* ==========================================================================
    8. Generic page (about/contact) & footer
    ========================================================================== */

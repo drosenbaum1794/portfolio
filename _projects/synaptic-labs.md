@@ -13,6 +13,10 @@ links:
   - label: "synapticlabs.ai"
     url: "https://synapticlabs.ai"
 ---
+<a class="brand-logo" href="https://synapticlabs.ai" target="_blank" rel="noopener">
+  <img src="{{ '/assets/images/synaptic-labs-logo.png' | relative_url }}" alt="Synaptic Labs logo">
+</a>
+
 ## What it was
 
 An AI education and deployment company focused on making AI practical and

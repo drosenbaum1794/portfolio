@@ -193,28 +193,65 @@ From the content package, worth keeping in front of you when editing:
 
 ## Previewing locally
 
-Requires [Ruby](https://www.ruby-lang.org/en/documentation/installation/) once.
+Ruby 3.3 with DevKit is installed on the main machine already. On a fresh one,
+`winget install RubyInstallerTeam.RubyWithDevKit.3.3`, then:
 
 ```
 bundle install
-bundle exec jekyll serve
+bundle exec jekyll serve --livereload
 ```
 
-Then open http://localhost:4000/portfolio/.
+Then open http://localhost:4000/portfolio/. Save any file and the browser
+reloads itself.
 
-You do not strictly need this. Pushing to `master` rebuilds the live site in a
-minute or two either way.
+Because the Gemfile pins the `github-pages` gem, this runs the exact Jekyll and
+plugin versions GitHub uses in production. What you see locally is what
+deploys.
+
+## The staging workflow
+
+Two branches:
+
+| Branch | What it is |
+| :--- | :--- |
+| `master` | The live site. Every push here republishes within a minute or two. |
+| `staging` | Work in progress. Never published. |
+
+Edits land on `staging` and get reviewed at `localhost:4000/portfolio/`. When a
+change looks right, it merges to `master` and goes live:
+
+```
+git checkout master
+git merge staging
+git push
+git checkout staging
+```
+
+Nothing reaches the public site until that merge.
+
+**`staging` is deliberately not pushed to GitHub.** This repo is public, so a
+pushed branch would put unfinished copy on the internet at a guessable URL,
+which defeats most of the point. The tradeoff is that work on `staging` exists
+only on this machine and is not backed up. For anything you would hate to
+retype, merge it to `master` sooner, or keep a copy in `_drafts-private/`.
+
+If you decide the backup matters more than the privacy, `git push -u origin
+staging` any time. It still will not publish, since Pages only builds `master`.
 
 ## Publishing changes
 
+From `staging`, after previewing:
+
 ```
-git add -A
-git commit -m "what changed"
+git checkout master
+git merge staging
 git push
+git checkout staging
 ```
 
 GitHub Pages rebuilds automatically. If a change does not show up, wait a
-minute and hard refresh (Ctrl+Shift+R). Pages caches HTML for ten minutes.
+minute and hard refresh (Ctrl+Shift+R). Pages caches HTML for ten minutes, so
+add `?x=1` to the URL if you want to be certain you are seeing the new build.
 
 ### Moving to a custom domain later
 

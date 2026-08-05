@@ -48,13 +48,13 @@ HubBot lives inside the Education Partnerships Slack space the cohorts already
 worked in. Learners @mention it with any HubSpot or bootcamp question and get a
 threaded, context-aware answer. No new tab, no login, no context switch.
 
-I built it on GPT Trainer with a persistent-memory Slack integration. That was
-a deliberate choice. At the time, Slack's APIs and bot capabilities were not
-especially advanced, and it was faster to build a genuinely solid support bot
-in a purpose-built tool and port it into Slack than to assemble the whole thing
-from scratch. We did a lot of latency testing and got the handoff between the
-two platforms close to instant. Training edits shipped straight through to
-Slack, so the loop between noticing a bad answer and fixing it stayed short.
+I built it on GPT Trainer with a persistent-memory Slack integration, which was
+a deliberate choice. Slack's APIs and bot capabilities weren't especially
+advanced at the time, so building a genuinely solid support bot in a
+purpose-built tool and porting it into Slack beat assembling the whole thing
+from scratch. A lot of latency testing later, the handoff between the two
+platforms was close to instant. Training edits shipped straight through, which
+kept the loop between noticing a bad answer and fixing it short.
 
 ## Results
 
@@ -77,11 +77,11 @@ confusing it, remove that material, add better material, then test hard against
 those specific questions until it answered them right consistently.
 
 One example. HubSpot draws a distinction between a buyer persona and an ideal
-customer profile. They sound like the same thing but they are two separate
+customer profile. They sound like the same thing, but they're two separate
 areas of the software, and HubBot kept pointing learners at the wrong one. The
 fix was to pull the training content covering the irrelevant one, write
-preferred answers for the responses it had gotten wrong, and upload targeted
-training to push it in the right direction.
+preferred answers for the responses it had gotten wrong, then upload targeted
+training to push it the right way.
 
 I also ran production auto-tagging on every interaction, scoring for coherence,
 whether a problem was raised, whether it was solved, and satisfaction. That
@@ -95,8 +95,8 @@ most learners who got what they needed simply moved on without confirming.
 Corrected for that under-tagging, the effective resolution rate lands closer to
 60 to 70%, which is in line with well-tuned product support bots.
 
-Build the evaluation schema before you need it. A metric you do not understand
-the mechanics of will lie to you in both directions.
+Build the evaluation schema before you need it. A metric whose mechanics you
+don't understand will lie to you in both directions.
 
 ## What the usage data was actually worth
 
@@ -106,9 +106,9 @@ surfaces. How-to and feasibility questions were the dominant intent, which
 confirmed the premise behind building HubBot at all: learners mostly needed
 procedural guidance, the exact repetitive support that burns mentor bandwidth.
 
-The distribution turned into a curriculum map. It showed where bootcamp content
-needed the most investment, not just where the bot needed tuning. That was the
-part I did not expect going in.
+The distribution turned into a curriculum map, showing where bootcamp content
+needed the most investment rather than only where the bot needed tuning. I
+didn't see that one coming.
 
 ## What I learned
 
@@ -116,7 +116,7 @@ Meeting users where they already work was the single biggest adoption driver.
 Learners used HubBot casually because asking it felt the same as asking a
 mentor.
 
-Shipping into a live cohort means every failure is visible immediately. That is
-uncomfortable and it is also the fastest feedback loop I have ever had. Early
-versions were rough. Monitoring real responses and correcting the knowledge
-base over successive cohorts is what turned it into something learners trusted.
+Shipping into a live cohort means every failure is visible immediately, which
+is uncomfortable and also the fastest feedback loop I've had. Early versions
+were rough. What turned it into something learners trusted was monitoring real
+responses and correcting the knowledge base over successive cohorts.

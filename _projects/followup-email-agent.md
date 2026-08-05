@@ -63,15 +63,15 @@ Every bit of that adoption was word of mouth.
 
 The gap between the 190 who tried it and the 28 who kept it is the number I
 care about. Sustained use with no mandate is the only proof that survives
-contact with a real team. Anyone can drive a spike with a launch email. Holding
-weekly actives months later means the thing is genuinely faster than the
-alternative for the people still opening it.
+contact with a real team. Anyone can drive a spike with a launch email, but
+holding weekly actives months later means the thing is genuinely faster than
+the alternative for the people still opening it.
 
 I dogfooded it from launch and tracked output quality as the underlying model
-changed over time, iterating to keep it effective across model versions. That
-turned out to matter more than I expected. An agent that was tuned well against
-one model version does not stay tuned on its own.
+changed underneath it, iterating to keep it effective across versions. That
+mattered more than I expected: an agent tuned well against one model version
+doesn't stay tuned on its own.
 
-Next time I would instrument earlier. Per-run satisfaction, time-to-send, and
-edit distance on the drafts would all have been worth capturing from day one
-rather than reconstructing them later.
+Next time I'd instrument earlier. Per-run satisfaction, time-to-send, and edit
+distance on the drafts were all worth capturing from day one instead of
+reconstructing later.

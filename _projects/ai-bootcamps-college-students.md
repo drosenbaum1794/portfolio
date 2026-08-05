@@ -33,26 +33,26 @@ deliverables, homework, and resources to work through every week. We held
 students accountable with tracking, submissions, and attendance. Anyone who
 missed a session watched the recording.
 
-The back four weeks paired each student with a real HubSpot customer who had
-signed up with an actual need. The students built an AI-enabled marketing
-campaign for them, which meant getting the tools set up and usable, producing
-an agreed volume of content, and leaving behind a roadmap for what came next.
+The back four weeks paired each student with a real HubSpot customer who'd
+signed up with an actual need. Students built them an AI-enabled marketing
+campaign: tools set up and usable, an agreed volume of content, and a roadmap
+for what came next.
 
-The campaigns themselves used the full HubSpot toolset: blogs, marketing
-emails, automations, forms, CTAs, all built with AI-enabled tooling. Clients
-came in with a specific need, usually an upcoming event, a product launch, or
-general nurture marketing. Students ran the build for things like the lead-up
-to a conference, a virtual event, or an executive dinner.
+The campaigns used the full HubSpot toolset. Blogs, marketing emails,
+automations, forms, CTAs, all built with AI-enabled tooling. Clients arrived
+with something specific in mind, usually an upcoming event, a product launch,
+or general nurture marketing, and students ran the build for things like the
+lead-up to a conference, a virtual event, or an executive dinner.
 
 Part of the deliverable was teaching the client to use the tools themselves, so
-the work did not evaporate when the student left.
+the work didn't evaporate when the student left.
 
 ## Where the companies came from
 
 I worked with HubSpot Academy, the customer success team, and other departments
-that had direct customer contact, and pulled data on good-fit accounts. We were
-not particular about industry. The target was smaller teams who owned marketing
-tools but were not activated on them.
+with direct customer contact, pulling data on good-fit accounts. Industry didn't
+matter to us. What we wanted were smaller teams who owned marketing tools but
+weren't activated on them.
 
 The pitch worked in both directions. Companies got real project work at no
 cost, and the program got those accounts using tools they already paid for. The
@@ -62,10 +62,10 @@ interest was never the hard part.
 
 The first one was messy. Around 300 students and a little over 200 companies,
 and we were figuring out student management, scheduling, and how to actually
-deliver payment at the end while it was running. The content was unpolished
-because it was the first time I had run it. HubSpot's AI tools were early too,
+deliver payment at the end while the thing was already running. The content was
+unpolished because I'd never run it before. HubSpot's AI tools were early too,
 several in beta, so things broke constantly and we were stressing the system in
-ways it had not been built for. Everyone was learning live.
+ways it hadn't been built for. Everyone was learning live.
 
 By the end it was a different program. We had a real process for building the
 trainings, informed by what worked and what to drop from previous runs. The
@@ -80,6 +80,6 @@ had students and clients coming back for another round.
 ## What I learned
 
 Watching a student go from unsure to capable over eight weeks is the most
-satisfying work I have done. A number of them got part-time and full-time
-offers from the very clients they had been assigned to, which was the clearest
-signal that the work was real and not an exercise.
+satisfying work I've done. A number of them got part-time and full-time offers
+from the very clients they'd been assigned to, which was the clearest signal
+that the work was real and not an exercise.

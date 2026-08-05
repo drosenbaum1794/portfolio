@@ -11,9 +11,11 @@
    which is what makes the dark palette a drop-in override.
    ========================================================================== */
 :root {
-  color-scheme: light dark;
+  /* Declares the page as light so the browser does not auto-darken form
+     controls and scrollbars for visitors whose OS is set to dark. */
+  color-scheme: light;
 
-  /* --- Semantic color: light ------------------------------------------- */
+  /* --- Semantic color --------------------------------------------------- */
   --color-bg: #fbf9f5;
   --color-bg-alt: #f2eee6;
   --color-surface: #ffffff;
@@ -74,36 +76,6 @@
 
   --ease: cubic-bezier(0.2, 0, 0.2, 1);
   --duration: 200ms;
-}
-
-/* --- Semantic color: dark ----------------------------------------------
-   Warm near-black rather than pure #000, so the site keeps the same warmth
-   it has in light mode. The accent lightens, because the light-mode indigo
-   does not clear 4.5:1 against a dark background.
-   ---------------------------------------------------------------------- */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-bg: #17161b;
-    --color-bg-alt: #201f26;
-    --color-surface: #1d1c22;
-    --color-header-bg: rgba(23, 22, 27, 0.85);
-    --color-ink: #f3f0ea;
-    --color-ink-soft: #aaa49b;
-    --color-border: #36333c;
-    --color-accent: #aab6fd;
-    --color-accent-ink: #17161b;
-    --color-accent-soft: #292640;
-    --color-tag-bg: #332d22;
-    --color-tag-ink: #e3d2ab;
-    --color-bar-muted: #56514a;
-    --color-overlay: rgba(9, 8, 11, 0.85);
-    --color-overlay-ink: #f3f0ea;
-    --color-focus: #aab6fd;
-
-    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
-    --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.45);
-    --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.55);
-  }
 }
 
 /* ==========================================================================

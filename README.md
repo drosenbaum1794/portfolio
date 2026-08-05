@@ -262,24 +262,26 @@ point DNS at GitHub Pages, then set `url` to the domain and `baseurl: ""` in
 ## Changing the look
 
 Everything visual is in `assets/css/main.scss`, section 1. Nothing below that
-section contains a raw hex value, which is what lets the dark palette be a
-drop-in override rather than a second stylesheet.
+section contains a raw hex value, so re-theming the whole site means editing
+one block.
 
 | Token group | What it controls |
 | :--- | :--- |
-| `--color-*` | Every color. Defined twice: light in `:root`, dark in the `prefers-color-scheme` block right below it. |
+| `--color-*` | Every color, all defined once in `:root`. |
 | `--text-*` | Type scale, `--text-xs` through `--text-4xl`. |
 | `--space-*` | Spacing scale, `--space-1` (4px) through `--space-9` (96px). |
 | `--font-sans` / `--font-serif` | Body and heading stacks. Both are system fonts, so the site makes zero network requests for type. |
 | `--measure` | Line length for long-form text. 68ch keeps it inside the 45–75 character readability band. |
 
 **If you change a color, check its contrast.** Body text needs 4.5:1 against
-whatever sits behind it. Both palettes currently pass at every pair, and it is
-easy to break that by nudging one value.
+whatever sits behind it. Every pair currently passes, and it is easy to break
+that by nudging one value.
 
-Dark mode follows the visitor's OS setting. There is no toggle, deliberately:
-a toggle needs JavaScript, a stored preference, and a control in the nav, and
-almost everyone already has their OS set the way they want it.
+The site is light only. `color-scheme: light` on `:root` tells the browser so,
+which stops it auto-darkening form controls and scrollbars for visitors whose
+OS is set to dark. If you ever want a dark palette, it is a second block of
+`--color-*` values inside a `prefers-color-scheme` query and nothing else,
+because no component rule holds a raw color.
 
 ### Motion
 

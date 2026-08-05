@@ -4,10 +4,51 @@
   {% include head.html %}
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
   {% include nav.html %}
   <main id="main">
     {{ content }}
   </main>
   {% include footer.html %}
+
+  {% comment %}
+    Scroll reveal. Deliberately dependency-free and defensive: it bails on
+    prefers-reduced-motion, bails where IntersectionObserver is missing, and
+    only adds the class that hides content once it knows it can show it
+    again. The timeout is a last resort so a scripting failure can never
+    leave the page blank.
+  {% endcomment %}
+  <script>
+  (function () {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    if (!('IntersectionObserver' in window)) return;
+
+    var targets = document.querySelectorAll(
+      '.project-card, .section__header, .stat-row, .chart, .project__meta'
+    );
+    if (!targets.length) return;
+
+    var root = document.documentElement;
+    root.classList.add('js-reveal');
+
+    var show = function (el) { el.classList.add('is-visible'); };
+    Array.prototype.forEach.call(targets, function (el) { el.classList.add('reveal'); });
+
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          show(entry.target);
+          io.unobserve(entry.target);
+        }
+      });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
+
+    Array.prototype.forEach.call(targets, function (el) { io.observe(el); });
+
+    window.setTimeout(function () {
+      Array.prototype.forEach.call(targets, show);
+    }, 2000);
+  })();
+  </script>
 </body>
 </html>

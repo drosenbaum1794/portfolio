@@ -2,9 +2,16 @@
   <div class="wrap site-header__inner">
     <a class="site-header__brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
 
-    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
-    <label for="nav-toggle" class="nav-toggle__btn" aria-label="Toggle menu">
+    {% comment %}
+      The checkbox is the real control, so it must stay reachable by keyboard.
+      It is visually hidden in CSS rather than display:none, and no aria-hidden
+      here — hiding a focusable element from assistive tech strands anyone
+      using one. The label's text supplies its accessible name.
+    {% endcomment %}
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="nav-toggle__btn">
       <span></span><span></span><span></span>
+      <span class="sr-only">Menu</span>
     </label>
 
     <nav class="site-nav">

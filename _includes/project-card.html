@@ -13,7 +13,15 @@
       </div>
     {% endif %}
     {% if p.video_platform and p.video_platform != "none" %}
-      <span class="project-card__badge">▶ Watch walkthrough</span>
+      {%- comment -%}
+        An SVG rather than the ▶ character: glyph icons render at wildly
+        different sizes across fonts and get announced as text by screen
+        readers.
+      {%- endcomment -%}
+      <span class="project-card__badge">
+        <svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2 1.5v9l8-4.5z" fill="currentColor"/></svg>
+        Watch walkthrough
+      </span>
     {% endif %}
   </div>
   <div class="project-card__body">

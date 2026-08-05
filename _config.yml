@@ -4,10 +4,10 @@
 # ------------------------------------------------------------------
 
 title: "Dan Rosenbaum"
-tagline: "AI enablement, education, and tools that get used"
+tagline: "AI tools people still use in month three"
 description: >-
-  I build AI tools people actually adopt, and I measure whether they keep
-  using them.
+  I build AI tools inside real companies, then go back months later to find
+  out who is still using them.
 
 # Used to build absolute URLs (leave baseurl blank for a *.github.io user site,
 # or set it to "/your-repo-name" for a project site. See README).
@@ -28,7 +28,7 @@ author:
   photo_alt: "Dan Rosenbaum, smiling with arms crossed"
 
 # ------------------------------------------------------------------
-# Collections — projects live here as individual markdown files.
+# Collections. Projects live here as individual markdown files.
 # See README.md for how to add a new one.
 # ------------------------------------------------------------------
 collections:

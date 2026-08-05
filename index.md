@@ -4,6 +4,6 @@ title: Home
 permalink: /
 headline: "Counselor turned implementer turned builder."
 ---
-I have spent nine years helping people trust new ways of working, first with
-clinical software in hospitals, then with CRM at HubSpot, now with AI. I build
-tools people adopt without being told to, and I measure whether they stick.
+Nine years of talking people into software they never asked for. Electronic
+health records on hospital units, then CRM at HubSpot, now AI. I build things
+people pick up without being told to, which is a harder test than it sounds.

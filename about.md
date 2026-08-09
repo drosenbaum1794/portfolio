@@ -1,36 +1,37 @@
 ---
 layout: page
 title: About
-subtitle: "The software is never the hard part. The hard part is getting people to trust a new way of working."
+subtitle: " Getting people to trust new ways of working."
 permalink: /about/
 photo: "/assets/images/dan-about.jpg"
 photo_alt: "Dan Rosenbaum pulling a playful face, hands raised beside his head"
 ---
-I started out as a mental health counselor, splitting my time between an
-inpatient psychiatric unit and an inpatient eating disorders unit. Odd opening
-for someone who ended up in software, I know. Stay with me.
+My first job out of college was as a mental health counselor, splitting my time between an
+inpatient psychiatric unit and an inpatient eating disorders unit. Odd start
+for someone who ended up in the digital transformation space, I know. Stay with me here!
 
-Then two and a half years at MEDITECH, flying around the country teaching
-hospital administrators to work inside new electronic health record systems.
-The software always worked. What made it hard was walking onto a unit where
-people had done the same thing the same way for years, asking them to trust
-something new, with compliance rules sitting on top of the whole thing.
+I followed some great advice and got a job at MEDITECH, two and a half years flying around the country teaching
+hospital administrators to work inside their new electronic health record systems.
+The software was hard to learn and there was always a technical aptitude hurdle I had to clear with admins. 
+Walking onto a hospital where people had done the same thing the same way for years, asking them to trust
+something new, and effecting meaningful change was always the hardest part, and a very engaging challenge.
 
-That turned out to be the actual job everywhere I've been since. Nearly seven
+That turned out to be the core of every job I've had since. Nearly seven
 years at HubSpot now, across customer onboarding, strategic consulting, and
-partner development. Partway through I co-founded Synaptic Labs with my
-brother, an AI education and deployment company, because I'd already watched
-software change how people work and AI looked like the largest version of that
-I'd come across.
+partner development. In 2023 I co-founded [Synaptic Labs](https://synapticlabs.ai){:target="_blank"} with my
+brother. As an AI education and deployment company we set out to solve systemic problems companies of all sizes faced
+with these new tools. I've seen first hand how software, when implemented effectively, can change the way people work for the better. 
+AI was the greatest equalizer I had ever seen, and I knew I wanted to help people use it better.
 
-These days I build AI tools and teach people to use them. Launch week doesn't
-tell you much; I'd rather know who is still using the thing in three months.
+These days I build AI tools in my free time and teach people to use them. 
+I split my time between personal projects and use cases to support my colleagues at work.
 
 ## What I'm interested in
 
-Conversations about AI enablement, adoption, and education. What I keep coming
-back to is spotting the pattern behind a thousand versions of the same problem,
-then solving it once.
+Conversations about AI enablement, adoption, education, and my dogs.
+Hiking, biking, snowboarding, woodworking, creating, and anything else that clears the bar 
+of being "fun in the sun"
+
 
 ## The short version
 
@@ -51,4 +52,4 @@ then solving it once.
 | Feb 2017 – Sep 2019 | Implementation Specialist | MEDITECH |
 | Jan 2015 – Feb 2017 | Mental Health Counselor | Walden Behavioral Care |
 
-The full history lives on [LinkedIn]({{ site.author.linkedin }}).
+The full history lives on [LinkedIn]({{ site.author.linkedin }}){:target="_blank"}.

@@ -33,8 +33,8 @@ chart:
       value: 12
       display: "12"
   note: >-
-    The drop is the interesting part. Nobody was told to use this, so the
-    people still running it every week are running it because it beats writing
+    Nobody was told to use this, so the people still running
+    it every week are running it because it beats writing
     the email themselves.
 ---
 ## The problem
@@ -47,9 +47,9 @@ context from past touchpoints, and shaping all of it into something sendable.
 
 An agent in Glean that ingests call transcripts and meeting notes, researches
 internal documentation and customer context, and produces a follow-up draft in
-a natural voice with researched links. Good enough to send with light editing.
+the users voice with researched links. Good enough to send with light editing.
 
-I built it outside the scope of my actual role.
+I built it outside the scope of my actual role, in my free time.
 
 ## Results
 
@@ -61,17 +61,14 @@ Every bit of that adoption was word of mouth.
 
 ## What I learned
 
-The gap between the 190 who tried it and the 28 who kept it is the number I
-care about. Sustained use with no mandate is the only proof that survives
-contact with a real team. Anyone can drive a spike with a launch email, but
-holding weekly actives months later means the thing is genuinely faster than
-the alternative for the people still opening it.
+Sustained use with no mandate is solid proof that we are solving real problems 
+for real teams. Anyone can drive a spike with a launch email, but
+holding weekly actives months later means the thing is faster and at least as 
+effective when compared to the alternative.
 
 I dogfooded it from launch and tracked output quality as the underlying model
-changed underneath it, iterating to keep it effective across versions. That
-mattered more than I expected: an agent tuned well against one model version
-doesn't stay tuned on its own.
+changed underneath it, iterating to keep it effective across versions. 
+Afterall, an agent tuned well against one model version doesn't always stay tuned on the next.
 
-Next time I'd instrument earlier. Per-run satisfaction, time-to-send, and edit
-distance on the drafts were all worth capturing from day one instead of
-reconstructing later.
+Next time I would try to engage in a more formal rollout and hold accountability for
+per-run satisfaction, time savings, and editing needs on the drafts.

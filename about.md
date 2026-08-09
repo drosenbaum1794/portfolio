@@ -18,7 +18,7 @@ something new, and effecting meaningful change was always the hardest part, and 
 
 That turned out to be the core of every job I've had since. Nearly seven
 years at HubSpot now, across customer onboarding, strategic consulting, and
-partner development. In 2023 I co-founded [Synaptic Labs](www.synapticlabs.ai) with my
+partner development. In 2023 I co-founded [Synaptic Labs](https://synapticlabs.ai) with my
 brother. As an AI education and deployment company we set out to solve systemic problems with these new tools.
 I've seen first hand how software, when implemented effectively, can change the way people work for the better. 
 AI was the greatest equalizer I had ever seen, and I knew I wanted to help people use it better.

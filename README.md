@@ -253,11 +253,32 @@ GitHub Pages rebuilds automatically. If a change does not show up, wait a
 minute and hard refresh (Ctrl+Shift+R). Pages caches HTML for ten minutes, so
 add `?x=1` to the URL if you want to be certain you are seeing the new build.
 
-### Moving to a custom domain later
+### The custom domain
 
-Buy the domain, add a `CNAME` file at the repo root containing just the domain,
-point DNS at GitHub Pages, then set `url` to the domain and `baseurl: ""` in
-`_config.yml`.
+The site runs on `dan-rosenbaum.com`, registered at GoDaddy. Three things make
+that work, and all three have to agree:
+
+| Where | What |
+| :--- | :--- |
+| `CNAME` at the repo root | One line, `dan-rosenbaum.com`. This is what GitHub Pages actually reads. Deleting it reverts the site to the github.io URL. |
+| GoDaddy DNS | Four A records on `@` pointing at GitHub, plus `www` as a CNAME to `drosenbaum1794.github.io`. |
+| `_config.yml` | `url` is the domain and `baseurl` is empty. |
+
+GitHub's apex A records:
+
+```
+185.199.108.153
+185.199.109.153
+185.199.110.153
+185.199.111.153
+```
+
+**Do not delete the `CNAME` file.** Some Jekyll workflows drop it on rebuild,
+which silently unsets the custom domain and takes the site off the domain until
+someone notices.
+
+Local preview now serves at `http://localhost:4000/` rather than
+`/portfolio/`, since baseurl is empty.
 
 ## Changing the look
 

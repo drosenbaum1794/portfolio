@@ -9,10 +9,12 @@ description: >-
   I build AI tools inside real companies, then go back months later to find
   out who is still using them.
 
-# Used to build absolute URLs (leave baseurl blank for a *.github.io user site,
-# or set it to "/your-repo-name" for a project site. See README).
-url: "https://drosenbaum1794.github.io"
-baseurl: "/portfolio"
+# Used to build absolute URLs. The site runs on a custom apex domain, so it
+# serves from the root and baseurl stays empty. The CNAME file at the repo
+# root is what tells GitHub Pages about the domain; these two only affect
+# canonical URLs, the sitemap, and the feed.
+url: "https://dan-rosenbaum.com"
+baseurl: ""
 
 # When true, projects without a video show a "coming soon" slot on their page.
 # Off by default. Projects that do have a video always show it either way.

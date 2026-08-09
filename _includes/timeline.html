@@ -1,0 +1,19 @@
+{% comment %}
+  Vertical career timeline. Entries live in the page's front matter under
+  `timeline:`, so adding a role never means touching markup or CSS.
+
+  Usage: {% include timeline.html entries=page.timeline %}
+
+  Each entry takes dates, role, org, and optionally `current: true` to fill
+  in the marker. An ordered list, because the sequence is the point.
+{% endcomment %}
+<ol class="timeline">
+  {% for entry in include.entries %}
+  <li class="timeline__item{% if entry.current %} timeline__item--current{% endif %}">
+    <span class="timeline__marker" aria-hidden="true"></span>
+    <p class="timeline__dates">{{ entry.dates }}</p>
+    <h3 class="timeline__role">{{ entry.role }}</h3>
+    <p class="timeline__org">{{ entry.org }}</p>
+  </li>
+  {% endfor %}
+</ol>

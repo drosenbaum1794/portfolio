@@ -373,6 +373,79 @@ ul { margin: 0; padding: 0; list-style: none; }
 }
 
 /* ==========================================================================
+   8b. Career timeline
+   A spine with a bubble per role. Selectors are scoped under .timeline so
+   they outrank the .prose h3 and .prose p rules this sits inside.
+   ========================================================================== */
+.timeline {
+  position: relative;
+  list-style: none;
+  margin: var(--space-5) 0 0;
+  padding: 0;
+}
+.timeline .timeline__item {
+  position: relative;
+  margin: 0;
+  padding: 0 0 var(--space-6) var(--space-6);
+}
+.timeline .timeline__item:last-child { padding-bottom: 0; }
+
+/* The spine, drawn per item rather than once down the whole list. A single
+   full-height line would run past the last bubble and trail alongside the
+   final entry's text. Each segment starts at its own bubble's centre and
+   reaches 11px into the next item, which is exactly that bubble's centre.
+   The last item draws nothing, so the line stops where the dates stop. */
+.timeline .timeline__item:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  left: 7px;
+  top: 11px;
+  bottom: -11px;
+  width: 2px;
+  background: var(--color-border);
+}
+
+.timeline .timeline__marker {
+  position: absolute;
+  left: 0;
+  top: 3px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--color-bg);
+  border: 2px solid var(--color-border);
+}
+/* The role held now. Filled rather than hollow, and the date line picks up
+   the accent too, so the distinction is not carried by colour alone. */
+.timeline .timeline__item--current .timeline__marker {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+}
+.timeline .timeline__item--current .timeline__dates { color: var(--color-accent); }
+
+.timeline .timeline__dates {
+  margin: 0 0 2px;
+  font-size: var(--text-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-ink-soft);
+}
+.timeline .timeline__role {
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  font-weight: 700;
+  line-height: var(--leading-snug);
+  letter-spacing: 0;
+  margin: 0 0 2px;
+}
+.timeline .timeline__org {
+  margin: 0;
+  font-size: var(--text-sm);
+  color: var(--color-ink-soft);
+}
+
+/* ==========================================================================
    6. Sections & project grid
    ========================================================================== */
 .section { padding: var(--space-6) var(--space-5) var(--space-8); }

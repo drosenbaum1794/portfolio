@@ -193,6 +193,21 @@ Rules worth keeping:
 - Only chart numbers you can source. A chart implies a precision that prose
   does not.
 
+## The career timeline
+
+Roles live in `about.md` front matter under `timeline:`, newest first:
+
+```yaml
+timeline:
+  - dates: "Feb 2024 – present"
+    role: "Senior Partner Development Manager"
+    org: "HubSpot"
+    current: true      # fills the bubble. Mark exactly one.
+```
+
+`_includes/timeline.html` renders it, so adding a role is three lines of
+front matter and no markup. Use an en dash in the date range, not a hyphen.
+
 ## Voice rules for site copy
 
 From the content package, worth keeping in front of you when editing:

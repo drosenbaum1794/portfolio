@@ -5,6 +5,28 @@ subtitle: " Getting people to trust new ways of working."
 permalink: /about/
 photo: "/assets/images/dan-about.jpg"
 photo_alt: "Dan Rosenbaum pulling a playful face, hands raised beside his head"
+# Career timeline. Newest first. Add a role here and the timeline picks it
+# up; mark exactly one entry `current: true` to fill in its marker.
+timeline:
+  - dates: "Feb 2024 – present"
+    role: "Senior Partner Development Manager"
+    org: "HubSpot"
+    current: true
+  - dates: "Apr 2023 – Jan 2026"
+    role: "Co-founder"
+    org: "Synaptic Labs"
+  - dates: "Aug 2022 – Feb 2024"
+    role: "Strategic Channel Consultant"
+    org: "HubSpot"
+  - dates: "Sep 2019 – Aug 2022"
+    role: "Senior Customer Onboarding Specialist"
+    org: "HubSpot"
+  - dates: "Feb 2017 – Sep 2019"
+    role: "Implementation Specialist"
+    org: "MEDITECH"
+  - dates: "Jan 2015 – Feb 2017"
+    role: "Mental Health Counselor"
+    org: "Walden Behavioral Care"
 ---
 My first job out of college was as a mental health counselor, splitting my time between an
 inpatient psychiatric unit and an inpatient eating disorders unit. Odd start
@@ -43,13 +65,6 @@ of being "fun in the sun"
 
 ## Career timeline
 
-| Dates | Role | Organization |
-| :--- | :--- | :--- |
-| Feb 2024 – present | Senior Partner Development Manager | HubSpot |
-| Apr 2023 – Jan 2026 | Co-founder | Synaptic Labs |
-| Aug 2022 – Feb 2024 | Strategic Channel Consultant | HubSpot |
-| Sep 2019 – Aug 2022 | Senior Customer Onboarding Specialist | HubSpot |
-| Feb 2017 – Sep 2019 | Implementation Specialist | MEDITECH |
-| Jan 2015 – Feb 2017 | Mental Health Counselor | Walden Behavioral Care |
+{% include timeline.html entries=page.timeline %}
 
 The full history lives on [LinkedIn]({{ site.author.linkedin }}){:target="_blank" rel="noopener"}.

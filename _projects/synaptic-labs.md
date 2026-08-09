@@ -42,18 +42,24 @@ standing the whole business up on the HubSpot platform.
 
 ## How the enablement work actually ran
 
-Under the state program we would go into a department and start by interviewing
-people about what their day actually looked like and where they were stuck.
+Under the state program we would do deep dives on AI enablement/ agentic building to 
+lay a really solid foundation for learners on a schedule that fit their needs.
 That program is strictly educational, so delivery was standard enablement on
 whatever the team was already using, usually Claude or ChatGPT.
 
-We ended each engagement with a capstone project. Workshop style, the team
+Each engagement ends with a capstone project. Workshop style, the team
 builds something real rather than watching a demo. Then we came back, talked
 through what they had built, and gave direction on making it better.
 
-A good number of those turned into retainer work. With these we had more time
-where we could interview more deeply, then find the people who were naturally
-inclined to build and enable them specifically to lead their own departments.
+If a company wanted more bespoke solutioning we would then spin up a consulting SOWs
+and go into their departments where we started by interviewing people about what 
+their day actually looked like as well as where they were stuck. We would deliver 
+AI adoption roadmaps and implementation services to make sure they weren't just spinning
+their wheels with no meaningful progress.
+
+With these we had more time where we could interview more deeply, then find
+the people who were naturally inclined to build and enable them specifically to 
+lead their own departments.
 
 That is really what an AI Center of Excellence is. It starts with internal
 champions, executive buy-in behind them, and clear guardrails covering ethics
@@ -61,18 +67,12 @@ and policy.
 
 ## Why I handed it off
 
-I always felt like it was my brother's baby. He brought me the idea initially,
-and I helped get it standing on its own two feet.
-
 By the end of my involvement the business was running without really needing me
 in it. We had good people delivering the work, my brother had other developers
 and a community manager around him, and I had been carrying a day job alongside
-it for three years. We weren't making enough for both of us to go full time,
-but we were making enough for him to. Handing it over let him reinvest my share
-of the profits back into the business.
+it for three years. I decided that the best thing for the longevity of the company
+was to hand it over fully and let him reinvest my share of the profits back into the business.
 
-I really realized that I like to dig in with a team longer term and take them to
-the next level of their AI maturity, with the ultimate goal of creating
-sustainable internal practices that persist with or without me. I had done the
-thing I set out to do, and I felt it was time for me to take my skills and apply
-them elsewhere.
+Through this experience I really realized that I prefer to dig in with an established team 
+longer term and help take them to the next level of their AI maturity, with the ultimate goal of creating
+sustainable internal practices that persist with or without me. 

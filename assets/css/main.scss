@@ -355,6 +355,15 @@ ul { margin: 0; padding: 0; list-style: none; }
   color: var(--color-accent-ink);
 }
 
+/* Confirmation state after the contact email is copied. Colour alone does
+   not carry the message; the label changes too. */
+.btn--copied,
+.btn--copied:hover {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-accent-ink);
+}
+
 /* ==========================================================================
    6. Sections & project grid
    ========================================================================== */

@@ -16,6 +16,8 @@ Email reaches me fastest.
 
 <p class="sr-only" role="status" aria-live="polite" id="email-copy-status"></p>
 
+Or take it from here: <span class="contact__address">{{ site.author.email }}</span>
+
 I'm in Beverly, MA, on the North Shore of Boston.
 
 <script>

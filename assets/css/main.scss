@@ -364,6 +364,14 @@ ul { margin: 0; padding: 0; list-style: none; }
   color: var(--color-accent-ink);
 }
 
+/* The address written out in full, for anyone who would rather grab it by
+   hand than trust a copy button. One click selects the whole thing. */
+.contact__address {
+  font-weight: 600;
+  -webkit-user-select: all;
+  user-select: all;
+}
+
 /* ==========================================================================
    6. Sections & project grid
    ========================================================================== */

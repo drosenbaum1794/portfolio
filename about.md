@@ -18,7 +18,7 @@ something new, and effecting meaningful change was always the hardest part, and 
 
 That turned out to be the core of every job I've had since. Nearly seven
 years at HubSpot now, across customer onboarding, strategic consulting, and
-partner development. In 2023 I co-founded [Synaptic Labs](https://synapticlabs.ai){:target="_blank"} with my
+partner development. In 2023 I co-founded [Synaptic Labs](https://synapticlabs.ai){:target="_blank" rel="noopener"} with my
 brother. As an AI education and deployment company we set out to solve systemic problems companies of all sizes faced
 with these new tools. I've seen first hand how software, when implemented effectively, can change the way people work for the better. 
 AI was the greatest equalizer I had ever seen, and I knew I wanted to help people use it better.
@@ -52,4 +52,4 @@ of being "fun in the sun"
 | Feb 2017 – Sep 2019 | Implementation Specialist | MEDITECH |
 | Jan 2015 – Feb 2017 | Mental Health Counselor | Walden Behavioral Care |
 
-The full history lives on [LinkedIn]({{ site.author.linkedin }}){:target="_blank"}.
+The full history lives on [LinkedIn]({{ site.author.linkedin }}){:target="_blank" rel="noopener"}.

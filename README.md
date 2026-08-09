@@ -4,7 +4,19 @@ Jekyll site for GitHub Pages. Homepage, projects grid, and a detail page per
 project with room for an embedded video walkthrough. Built so routine updates
 never require touching HTML or CSS.
 
-**Live at:** https://drosenbaum1794.github.io/portfolio/
+**Live at:** https://dan-rosenbaum.com
+
+## External links
+
+Anything pointing off this site opens in a new tab with `rel="noopener"`, and
+picks up an "(opens in a new tab)" label for screen readers. A script at the
+bottom of `_layouts/default.html` does it to every link on the page, so you
+never have to annotate one by hand. Internal links, `mailto:` and `tel:` are
+left alone.
+
+Writing `{:target="_blank" rel="noopener"}` after a markdown link still works
+and is worth doing on links that matter, since it survives with JavaScript
+turned off.
 
 ## Repo map
 

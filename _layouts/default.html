@@ -12,6 +12,40 @@
   {% include footer.html %}
 
   {% comment %}
+    Every link pointing off this site opens in a new tab. Done here rather
+    than annotated link by link so new content picks it up for free.
+    jekyll-target-blank would be tidier, but GitHub Pages only runs its own
+    plugin whitelist and that gem is not on it.
+  {% endcomment %}
+  <script>
+  (function () {
+    var here = window.location.host;
+    Array.prototype.forEach.call(document.querySelectorAll('a[href]'), function (a) {
+      // Leave mailto:, tel: and in-page anchors alone.
+      if (a.protocol !== 'http:' && a.protocol !== 'https:') return;
+      if (a.host === here) return;
+
+      a.target = '_blank';
+
+      // noopener stops the opened page reaching back through window.opener.
+      // Deliberately not noreferrer, so sites we link to still see the
+      // referral.
+      var rel = (a.getAttribute('rel') || '').split(/\s+/).filter(Boolean);
+      if (rel.indexOf('noopener') === -1) { rel.push('noopener'); }
+      a.setAttribute('rel', rel.join(' '));
+
+      // Warn screen reader users that the tab is about to change, without
+      // touching the visible text. Skipped when a label already exists, or
+      // when the link wraps an image rather than words.
+      var text = (a.textContent || '').trim();
+      if (text && !a.getAttribute('aria-label')) {
+        a.setAttribute('aria-label', text + ' (opens in a new tab)');
+      }
+    });
+  })();
+  </script>
+
+  {% comment %}
     Scroll reveal. Deliberately dependency-free and defensive: it bails on
     prefers-reduced-motion, bails where IntersectionObserver is missing, and
     only adds the class that hides content once it knows it can show it

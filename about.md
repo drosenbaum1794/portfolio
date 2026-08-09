@@ -52,4 +52,4 @@ of being "fun in the sun"
 | Feb 2017 – Sep 2019 | Implementation Specialist | MEDITECH |
 | Jan 2015 – Feb 2017 | Mental Health Counselor | Walden Behavioral Care |
 
-The full history lives on [LinkedIn]({{ site.author.linkedin }}).
+The full history lives on [LinkedIn]({{ site.author.linkedin }}){:target="_blank"}.

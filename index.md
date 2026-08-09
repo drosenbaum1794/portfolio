@@ -2,8 +2,8 @@
 layout: home
 title: Home
 permalink: /
-headline: "Counselor turned implementer turned builder."
+headline: "Implementer turned builder and partnership accelerator."
 ---
-Nine years of talking people into software they never asked for. Electronic
-health records on hospital units, then CRM at HubSpot, now AI. I build things
-people pick up without being told to, which is a harder test than it sounds.
+Helping people work smarter since 2017. From electronic health records in
+hospitals to CRMs for businesses of all sizes at HubSpot. I build processes and
+systems people want to use in the places they already do their best work.

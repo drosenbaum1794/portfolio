@@ -25,9 +25,15 @@ timeline:
   - dates: "Aug 2022 – Feb 2024"
     role: "Strategic Channel Consultant"
     org: "HubSpot"
+    note: "Enabled HubSpot's Diamond and Elite tier partners on service
+      delivery and client retention strategies."
   - dates: "Sep 2019 – Aug 2022"
     role: "Senior Customer Onboarding Specialist"
     org: "HubSpot"
+    note: "Onboarded new HubSpot customers onto the platform, translating
+      business goals into working CRM, marketing, and sales configurations.
+      Acted as a strategic partner to customer teams through implementation,
+      setting the foundation for long-term product adoption."
   - dates: "Feb 2017 – Sep 2019"
     role: "Implementation Specialist"
     org: "MEDITECH"

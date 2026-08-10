@@ -7,14 +7,21 @@ photo: "/assets/images/dan-about.jpg"
 photo_alt: "Dan Rosenbaum pulling a playful face, hands raised beside his head"
 # Career timeline. Newest first. Add a role here and the timeline picks it
 # up; mark exactly one entry `current: true` to fill in its marker.
+# An entry with a `note` becomes expandable. One without stays plain text,
+# so a missing note never shows an empty panel.
 timeline:
   - dates: "Feb 2024 – present"
     role: "Senior Partner Development Manager"
     org: "HubSpot"
     current: true
+    note: "I develop and enable a portfolio of about 25 partners."
   - dates: "Apr 2023 – Jan 2026"
     role: "Co-founder"
     org: "Synaptic Labs"
+    note: "Co-founded an AI education and deployment company with my brother.
+      I came in from the go-to-market side, built and ran the bootcamp program
+      with HubSpot Academy, and grew the company from zero revenue to multiple
+      six figures before handing it over."
   - dates: "Aug 2022 – Feb 2024"
     role: "Strategic Channel Consultant"
     org: "HubSpot"
@@ -24,9 +31,13 @@ timeline:
   - dates: "Feb 2017 – Sep 2019"
     role: "Implementation Specialist"
     org: "MEDITECH"
+    note: "Flew around the country teaching hospital administrators to work
+      inside their new electronic health record systems."
   - dates: "Jan 2015 – Feb 2017"
     role: "Mental Health Counselor"
     org: "Walden Behavioral Care"
+    note: "Split my time between an inpatient psychiatric unit and an
+      inpatient eating disorders unit."
 ---
 My first job out of college was as a mental health counselor, splitting my time between an
 inpatient psychiatric unit and an inpatient eating disorders unit. Odd start

@@ -380,7 +380,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 .timeline {
   position: relative;
   list-style: none;
-  margin: var(--space-5) 0 0;
+  margin: var(--space-5) 0 var(--space-7);
   padding: 0;
 }
 .timeline .timeline__item {
@@ -440,9 +440,57 @@ ul { margin: 0; padding: 0; list-style: none; }
   margin: 0 0 2px;
 }
 .timeline .timeline__org {
+  display: block;
   margin: 0;
   font-size: var(--text-sm);
   color: var(--color-ink-soft);
+}
+
+/* Expandable entries. Built on <details>, so the open and closed state is
+   announced and keyboard-operable without a line of script. */
+.timeline .timeline__details { margin: 0; }
+.timeline .timeline__summary {
+  cursor: pointer;
+  /* Hide the native disclosure triangle in favour of the chevron below.
+     Two rules because Safari still needs the WebKit pseudo-element. */
+  list-style: none;
+}
+.timeline .timeline__summary::-webkit-details-marker { display: none; }
+
+/* The chevron rides beside the role rather than off at the right margin,
+   where it would sit hundreds of pixels from the text it belongs to. */
+.timeline .timeline__role--toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+.timeline .timeline__role--toggle::after {
+  content: "";
+  /* A flex item by virtue of the inline-flex parent, so it needs to be told
+     not to shrink. Without this it squashes to about 4px wide and reads as
+     a smudge rather than a chevron. */
+  flex: none;
+  width: 7px;
+  height: 7px;
+  border-right: 2px solid var(--color-ink-soft);
+  border-bottom: 2px solid var(--color-ink-soft);
+  transform: translateY(-2px) rotate(45deg);
+  transition: transform var(--duration) var(--ease);
+}
+.timeline .timeline__details[open] .timeline__role--toggle::after {
+  transform: translateY(1px) rotate(-135deg);
+}
+.timeline .timeline__summary:hover .timeline__role--toggle::after,
+.timeline .timeline__summary:focus-visible .timeline__role--toggle::after {
+  border-color: var(--color-accent);
+}
+
+.timeline .timeline__note {
+  margin: var(--space-3) 0 0;
+  font-size: var(--text-sm);
+  line-height: var(--leading-normal);
+  color: var(--color-ink-soft);
+  max-width: 52ch;
 }
 
 /* ==========================================================================

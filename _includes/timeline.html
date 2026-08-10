@@ -4,16 +4,33 @@
 
   Usage: {% include timeline.html entries=page.timeline %}
 
-  Each entry takes dates, role, org, and optionally `current: true` to fill
-  in the marker. An ordered list, because the sequence is the point.
+  Each entry takes dates, role, org, an optional `note` and optionally
+  `current: true` to fill in the marker.
+
+  An entry with a note becomes expandable, built on <details> rather than a
+  scripted toggle: it is keyboard accessible for free, announces its own
+  open and closed state to screen readers, and still opens with JavaScript
+  disabled. An entry without a note renders as plain text with no affordance,
+  so nothing ever expands to an empty panel.
 {% endcomment %}
 <ol class="timeline">
   {% for entry in include.entries %}
   <li class="timeline__item{% if entry.current %} timeline__item--current{% endif %}">
     <span class="timeline__marker" aria-hidden="true"></span>
     <p class="timeline__dates">{{ entry.dates }}</p>
+
+    {% if entry.note %}
+    <details class="timeline__details">
+      <summary class="timeline__summary">
+        <h3 class="timeline__role timeline__role--toggle">{{ entry.role }}</h3>
+        <span class="timeline__org">{{ entry.org }}</span>
+      </summary>
+      <p class="timeline__note">{{ entry.note }}</p>
+    </details>
+    {% else %}
     <h3 class="timeline__role">{{ entry.role }}</h3>
-    <p class="timeline__org">{{ entry.org }}</p>
+    <span class="timeline__org">{{ entry.org }}</span>
+    {% endif %}
   </li>
   {% endfor %}
 </ol>

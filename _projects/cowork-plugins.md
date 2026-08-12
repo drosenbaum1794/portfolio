@@ -5,6 +5,10 @@ role: "Builder"
 period: "Ongoing"
 order: 5
 featured: false
+# Hidden from the site while this page gets rewritten. Delete this line to
+# put it back. Note the file is still readable in the public repo, so treat
+# anything in here as public even while it is off the site.
+published: false
 tags: [Internal Tooling, AI Agents, Automation]
 skills: [Claude Code, Cowork, Plugin Development, Evaluation Design]
 video_platform: none   # set to youtube or loom once recorded

@@ -12,8 +12,6 @@ photo_alt: "Dan Rosenbaum pulling a playful face, hands raised beside his head"
 photos:
   - src: "/assets/images/dan-about.jpg"
     alt: "Dan Rosenbaum pulling a playful face, hands raised beside his head"
-  - src: "/assets/images/dan-about-ice-climbing.jpg"
-    alt: "Dan in a climbing helmet and harness beside a frozen waterfall, one gloved hand resting on the ice"
   - src: "/assets/images/dan-about-olympic-rings.jpg"
     alt: "Dan in snowboarding gear holding his board beside a set of Olympic rings, on a snowy mountain in falling snow"
   - src: "/assets/images/dan-about-fun.jpg"

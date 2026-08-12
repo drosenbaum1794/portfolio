@@ -71,21 +71,32 @@
     document.documentElement.classList.add('js-stack');
     shots[0].classList.add('is-in');
 
-    var body = document.querySelector('.page__body') || document.body;
     var queued = false;
+
+    // Where the second shot lands and where the last one does, as fractions
+    // of the page's whole scroll. Everything else sits evenly between, so
+    // widening this gap is the way to slow the pile down.
+    var FIRST = 0.15;
+    var LAST = 0.85;
+
+    function thresholdFor(index) {
+      if (shots.length < 3) { return FIRST; }
+      return FIRST + (LAST - FIRST) * ((index - 1) / (shots.length - 2));
+    }
 
     function update() {
       queued = false;
-      var box = body.getBoundingClientRect();
-      var travel = box.height - window.innerHeight;
-      var progress = travel > 0 ? (-box.top) / travel : 1;
+      // Measured against the whole document rather than the text column.
+      // The column starts well below the top of the page, so using it meant
+      // progress stayed at zero through the first stretch of scrolling and
+      // then ran the shots through in a rush near the bottom.
+      var doc = document.documentElement;
+      var travel = doc.scrollHeight - window.innerHeight;
+      var progress = travel > 0 ? window.pageYOffset / travel : 1;
       progress = Math.min(Math.max(progress, 0), 1);
 
-      // Land the final shot at 85% rather than the very bottom, so the pile
-      // finishes while it is still on screen.
-      var revealed = 1 + Math.floor((progress / 0.85) * (shots.length - 1));
-      for (var i = 0; i < shots.length; i++) {
-        shots[i].classList.toggle('is-in', i < revealed);
+      for (var i = 1; i < shots.length; i++) {
+        shots[i].classList.toggle('is-in', progress >= thresholdFor(i));
       }
     }
 

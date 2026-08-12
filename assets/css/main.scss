@@ -879,11 +879,15 @@ ul { margin: 0; padding: 0; list-style: none; }
 html.js-stack .photo-stack__item {
   opacity: 0;
   transform: rotate(0deg) translate(0, 20px) scale(0.94);
+  /* The transition belongs on the resting state, not on .is-in. Declared
+     only there, it exists while the shot animates in and vanishes the
+     moment the class comes off, so scrolling back up snapped them away
+     instead of settling them back down. */
+  transition: opacity 420ms var(--ease), transform 420ms var(--ease);
 }
 html.js-stack .photo-stack__item.is-in {
   opacity: 1;
   transform: rotate(var(--tilt)) translate(var(--dx), var(--dy));
-  transition: opacity 420ms var(--ease), transform 420ms var(--ease);
 }
 @media (prefers-reduced-motion: reduce) {
   html.js-stack .photo-stack__item,

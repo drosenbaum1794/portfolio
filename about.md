@@ -16,10 +16,10 @@ photos:
     alt: "Dan in a climbing helmet and harness beside a frozen waterfall, one gloved hand resting on the ice"
   - src: "/assets/images/dan-about-olympic-rings.jpg"
     alt: "Dan in snowboarding gear holding his board beside a set of Olympic rings, on a snowy mountain in falling snow"
-  - src: "/assets/images/dan-about-climbing.jpg"
-    alt: "Dan on a via ferrata route partway down a gorge, one arm flung out, a stone arch bridge and waterfall behind him"
   - src: "/assets/images/dan-about-fun.jpg"
     alt: "Dan at a wedding in a straw hat, holding oversized novelty glasses and a cigar cutout on sticks in front of his face"
+  - src: "/assets/images/dan-about-climbing.jpg"
+    alt: "Dan on a via ferrata route partway down a gorge, one arm flung out, a stone arch bridge and waterfall behind him"
 # Career timeline. Newest first. Add a role here and the timeline picks it
 # up; mark exactly one entry `current: true` to fill in its marker.
 # An entry with a `note` becomes expandable. One without stays plain text,

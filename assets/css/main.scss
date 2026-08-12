@@ -841,6 +841,57 @@ ul { margin: 0; padding: 0; list-style: none; }
   line-height: var(--leading-snug);
   color: var(--color-ink-soft);
 }
+
+/* --------------------------------------------------------------------------
+   Photo pile. Set `photos:` on a page instead of `photo:` and the shots
+   stack up as the reader scrolls, each landing at its own angle.
+
+   The container carries the shape and every shot is absolutely positioned
+   inside it, so the pile occupies one photo's worth of space no matter how
+   many are in it.
+   -------------------------------------------------------------------------- */
+.photo-stack {
+  position: relative;
+  aspect-ratio: 4 / 5;
+}
+.photo-stack__item {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  padding: 8px;
+  background: var(--color-surface);
+  border-radius: 4px;
+  box-shadow: var(--shadow-md);
+  transform: rotate(var(--tilt)) translate(var(--dx), var(--dy));
+}
+/* .page__photo img above also matches these, so the parts of it that do not
+   belong on a pile get turned off here rather than fought with !important. */
+.photo-stack__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 2px;
+  box-shadow: none;
+}
+
+/* Shots are only hidden while the script is running, so with JavaScript off
+   the whole pile renders rather than a blank column. */
+html.js-stack .photo-stack__item {
+  opacity: 0;
+  transform: rotate(0deg) translate(0, 20px) scale(0.94);
+}
+html.js-stack .photo-stack__item.is-in {
+  opacity: 1;
+  transform: rotate(var(--tilt)) translate(var(--dx), var(--dy));
+  transition: opacity 420ms var(--ease), transform 420ms var(--ease);
+}
+@media (prefers-reduced-motion: reduce) {
+  html.js-stack .photo-stack__item,
+  html.js-stack .photo-stack__item.is-in {
+    opacity: 1;
+    transform: rotate(var(--tilt)) translate(var(--dx), var(--dy));
+  }
+}
 @media (min-width: 760px) {
   .page__body--with-photo {
     display: grid;

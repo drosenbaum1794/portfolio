@@ -3,8 +3,23 @@ layout: page
 title: About
 subtitle: " Getting people to trust new ways of working."
 permalink: /about/
+# Kept as the fallback: delete the `photos:` block below and the page goes
+# back to this single image.
 photo: "/assets/images/dan-about.jpg"
 photo_alt: "Dan Rosenbaum pulling a playful face, hands raised beside his head"
+# The pile. First one shows on load, the rest drop in on scroll, in this
+# order. Reorder these lines to change which lands when.
+photos:
+  - src: "/assets/images/dan-about.jpg"
+    alt: "Dan Rosenbaum pulling a playful face, hands raised beside his head"
+  - src: "/assets/images/dan-about-ice-climbing.jpg"
+    alt: "Dan in a climbing helmet and harness beside a frozen waterfall, one gloved hand resting on the ice"
+  - src: "/assets/images/dan-about-olympic-rings.jpg"
+    alt: "Dan in snowboarding gear holding his board beside a set of Olympic rings, on a snowy mountain in falling snow"
+  - src: "/assets/images/dan-about-climbing.jpg"
+    alt: "Dan on a via ferrata route partway down a gorge, one arm flung out, a stone arch bridge and waterfall behind him"
+  - src: "/assets/images/dan-about-fun.jpg"
+    alt: "Dan at a wedding in a straw hat, holding oversized novelty glasses and a cigar cutout on sticks in front of his face"
 # Career timeline. Newest first. Add a role here and the timeline picks it
 # up; mark exactly one entry `current: true` to fill in its marker.
 # An entry with a `note` becomes expandable. One without stays plain text,

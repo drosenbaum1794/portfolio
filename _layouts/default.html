@@ -46,6 +46,62 @@
   </script>
 
   {% comment %}
+    Photo pile. Shots drop in as the reader moves down the page, spread over
+    the scrollable height rather than tied to particular sections, so it
+    works whatever the page contains and however many photos there are.
+  {% endcomment %}
+  <script>
+  (function () {
+    var stack = document.querySelector('.photo-stack');
+    if (!stack) return;
+
+    var shots = Array.prototype.slice.call(stack.children);
+    var showAll = function () {
+      shots.forEach(function (el) { el.classList.add('is-in'); });
+    };
+    if (shots.length < 2) { showAll(); return; }
+
+    var reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
+    // Below the sidebar breakpoint the pile sits above the text and scrolls
+    // out of view almost immediately, so staging it there would mean shots
+    // appearing off screen. Show the finished pile instead.
+    var wide = window.matchMedia('(min-width: 760px)');
+    if (reduced.matches || !wide.matches) { showAll(); return; }
+
+    document.documentElement.classList.add('js-stack');
+    shots[0].classList.add('is-in');
+
+    var body = document.querySelector('.page__body') || document.body;
+    var queued = false;
+
+    function update() {
+      queued = false;
+      var box = body.getBoundingClientRect();
+      var travel = box.height - window.innerHeight;
+      var progress = travel > 0 ? (-box.top) / travel : 1;
+      progress = Math.min(Math.max(progress, 0), 1);
+
+      // Land the final shot at 85% rather than the very bottom, so the pile
+      // finishes while it is still on screen.
+      var revealed = 1 + Math.floor((progress / 0.85) * (shots.length - 1));
+      for (var i = 0; i < shots.length; i++) {
+        shots[i].classList.toggle('is-in', i < revealed);
+      }
+    }
+
+    function onScroll() {
+      if (queued) return;
+      queued = true;
+      window.requestAnimationFrame(update);
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+    update();
+  })();
+  </script>
+
+  {% comment %}
     Scroll reveal. Deliberately dependency-free and defensive: it bails on
     prefers-reduced-motion, bails where IntersectionObserver is missing, and
     only adds the class that hides content once it knows it can show it

@@ -124,6 +124,34 @@ either way.
 The slots crop to 4:5 portrait, so a vertical or square photo survives better
 than a wide one. More detail in `assets/images/README.md`.
 
+## A pile of photos instead of one
+
+Any page using the `page` layout can swap its single photo for a stack that
+builds as the reader scrolls. Replace `photo:` with `photos:`:
+
+```yaml
+photos:
+  - src: "/assets/images/dan-about.jpg"
+    alt: "Describe the photo"
+  - src: "/assets/images/dan-hiking.jpg"
+    alt: "Describe the photo"
+```
+
+The first is visible on load and the rest drop in on the way down the page,
+each at its own angle. Angles and offsets cycle through a fixed list in
+`_layouts/page.html`, so the arrangement is identical on every visit rather
+than random. Edit that list to change the look.
+
+Three to five reads best. Every shot is cropped to 4:5, so portrait or square
+originals survive better than wide ones.
+
+Keep `photo:` in the front matter as well and deleting the `photos:` block
+drops the page back to a single image.
+
+Below 760px the pile renders complete rather than staged, because there is no
+sidebar there and the photos would otherwise appear after scrolling off
+screen. Same when the reader prefers reduced motion.
+
 For photos anywhere else, markdown works in any page or project body, but the
 path has to go through `relative_url` or it breaks. This site is served from
 `/portfolio/`, so a bare `/assets/...` path resolves to the domain root and

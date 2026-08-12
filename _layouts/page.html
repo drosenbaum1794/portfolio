@@ -1,14 +1,38 @@
 ---
 layout: default
 ---
+{% assign has_media = false %}
+{% if page.photos or page.photo %}{% assign has_media = true %}{% endif %}
 <section class="wrap page">
   <header class="page__header">
     <h1>{{ page.title }}</h1>
     {% if page.subtitle %}<p class="page__subtitle">{{ page.subtitle }}</p>{% endif %}
   </header>
 
-  <div class="page__body{% if page.photo %} page__body--with-photo{% endif %}">
-    {% if page.photo %}
+  <div class="page__body{% if has_media %} page__body--with-photo{% endif %}">
+    {% if page.photos %}
+    {% comment %}
+      A pile of photos rather than one. They start as a single image and the
+      rest drop in as the reader scrolls, each landing at its own angle.
+      Tilts and offsets come from a fixed cycle rather than randomness, so
+      the arrangement is the same on every visit and can be tuned by hand.
+    {% endcomment %}
+    <div class="page__photo page__photo--stack">
+      <div class="photo-stack">
+        {% for shot in page.photos %}
+        <figure class="photo-stack__item"
+                style="--tilt: {% cycle 'tilt': '-2.5deg', '4.5deg', '-6deg', '3deg', '-4deg', '6.5deg' %};
+                       --dx: {% cycle 'dx': '0px', '10px', '-12px', '8px', '-6px', '13px' %};
+                       --dy: {% cycle 'dy': '0px', '-14px', '12px', '-8px', '16px', '-10px' %};
+                       z-index: {{ forloop.index }};">
+          <img src="{{ shot.src | relative_url }}"
+               alt="{{ shot.alt | default: site.author.name }}"
+               {% unless forloop.first %}loading="lazy"{% endunless %}>
+        </figure>
+        {% endfor %}
+      </div>
+    </div>
+    {% elsif page.photo %}
     <figure class="page__photo">
       {% comment %}
         Photos render at their natural shape by default, so landscape and

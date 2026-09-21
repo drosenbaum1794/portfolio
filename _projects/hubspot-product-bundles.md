@@ -1,6 +1,6 @@
 ---
-title: "Editable product bundles in HubSpot"
-summary: "HubSpot's native bundles lock you in the moment you add them. I built coded workflows that swap a deal's line items when a custom property changes, and gated which bundles each franchisee can even see."
+title: "HubSpot Product Bundles (Custom Properties + Custom Coded Workflows)"
+summary: "Native bundles lock you in the moment you add them. I built coded workflows that swap a deal's line items when a custom property changes, and gated which bundles each franchisee can even see."
 role: "Builder"
 order: 0
 featured: true
@@ -14,11 +14,11 @@ video_id: "GtHhZlDy7z4"
 
 A home builder running on HubSpot needed two things the CRM wouldn't give them.
 
-First, bundling. One home plan is thousands of line items: faucets, floorboards, shower heads, countertops, every interchangeable component of a cookie-cutter house. Builders needed to drop a whole plan onto a deal in one move.
+One was bundling. A single home plan runs to thousands of line items: faucets, floorboards, shower heads, countertops, every interchangeable component of a cookie-cutter house, and builders needed to drop the whole plan onto a deal in one move.
 
-Second, access. The franchisee network shouldn't all see the same plans. Some are proprietary, some are regionally locked, and the company didn't want pricing visible across the whole network.
+The other was access. Not every franchisee should see every plan; some are proprietary, some are regionally locked, and the company didn't want pricing visible across the whole network.
 
-HubSpot does have product bundles, but as of this recording they aren't editable. Pull a bundle onto a deal and you're stuck with it. You can't drop a line item or swap one out. For a builder who needs to mark up the lumber on a three-car garage, that limitation is the entire job.
+HubSpot does have product bundles, but as of this recording they aren't editable. Pull one onto a deal and you're stuck with it, unable to drop a line item or swap one out. For a builder marking up lumber on a three-car garage, that's the whole job.
 
 ## Why I didn't wait
 
@@ -42,8 +42,8 @@ The deal amount zeroes out and repopulates while you're looking at the record. R
 
 Access control is a custom property with conditional options. One property holds every home plan, and which options a given user sees is driven by the deal owner. Change the deal owner on a deal and the list of available plans changes with it.
 
-Deal owner isn't something individuals edit. It gets auto-assigned or managed separately, and that's what makes it usable as a permission boundary rather than a suggestion.
+Deal owner isn't something individuals edit; it's assigned for them or managed elsewhere, which is what turns it into a permission boundary rather than a suggestion.
 
 ## What it gets you
 
-A builder picks a plan, gets the full bundle, and can then edit it like any other deal. Lumber went up on the three-car garage, so that line takes a markup. Or it's a good week and that line takes 15% off. The bundle becomes a starting point instead of a cage, which is the part the native version doesn't do yet.
+A builder picks a plan, gets the full bundle, and can then edit it like any other deal. Lumber went up on the three-car garage, so that line takes a markup. Or it's the buyer's lucky day and that line takes 15% off. The bundle is a starting point instead of a cage. That's the part the native version doesn't do.

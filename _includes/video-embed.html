@@ -4,11 +4,16 @@
     - platform: "youtube" | "loom"
     - id: the YouTube video ID, or the Loom share ID
        (Loom share URL looks like https://www.loom.com/share/XXXXXXXX -> id is XXXXXXXX)
+
+  YouTube embeds start at 1.25x. Change data-playback-rate below to retune,
+  or set it per video if one ever needs a different speed. Loom has no
+  equivalent, so Loom embeds play at 1x.
 {% endcomment %}
 {% if include.platform == "youtube" %}
 <div class="video-embed">
   <iframe
-    src="https://www.youtube-nocookie.com/embed/{{ include.id }}"
+    src="https://www.youtube-nocookie.com/embed/{{ include.id }}?enablejsapi=1"
+    data-playback-rate="1.25"
     title="{{ include.title | default: 'Project video walkthrough' }}"
     frameborder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -16,6 +21,80 @@
     loading="lazy">
   </iframe>
 </div>
+
+<script>
+(function () {
+  {% comment %}
+    Guarded because a page could carry more than one embed, and this include
+    would then emit the script twice. One listener serves every player.
+  {% endcomment %}
+  if (window.__ytPlaybackRateBound) { return; }
+  window.__ytPlaybackRateBound = true;
+
+  var ORIGIN = 'https://www.youtube-nocookie.com';
+
+  {% comment %}
+    There is no URL parameter for playback speed. Verified: passing
+    playbackRate or speed on the embed URL is ignored outright. The rate has
+    to be set as a command once the player reports itself ready.
+
+    This talks to the iframe directly rather than loading YouTube's IFrame
+    API, which would mean pulling a script from youtube.com on every project
+    page and giving back most of what the nocookie embed buys. The cost is
+    that the message protocol is not a published contract, so if YouTube
+    changes it the videos simply play at 1x, which is where they were before.
+  {% endcomment %}
+  window.addEventListener('message', function (event) {
+    if (event.origin !== ORIGIN) { return; }
+
+    var message;
+    try { message = JSON.parse(event.data); } catch (err) { return; }
+    if (!message || message.event !== 'onReady') { return; }
+
+    var frames = document.querySelectorAll('.video-embed iframe[data-playback-rate]');
+    for (var i = 0; i < frames.length; i++) {
+      if (frames[i].contentWindow !== event.source) { continue; }
+      var rate = parseFloat(frames[i].getAttribute('data-playback-rate'));
+      if (!rate) { return; }
+      event.source.postMessage(JSON.stringify({
+        event: 'command',
+        func: 'setPlaybackRate',
+        args: [rate]
+      }), ORIGIN);
+      return;
+    }
+  });
+
+  {% comment %}
+    The player only starts reporting events once it has been told someone is
+    listening. Wired on the iframe's own load event so it still works under
+    loading="lazy", where the frame does not load until it nears the viewport.
+  {% endcomment %}
+  function listen(frame) {
+    frame.contentWindow.postMessage(JSON.stringify({
+      event: 'listening',
+      channel: 'widget'
+    }), ORIGIN);
+  }
+
+  function wire() {
+    var frames = document.querySelectorAll('.video-embed iframe[data-playback-rate]');
+    for (var i = 0; i < frames.length; i++) {
+      (function (frame) {
+        frame.addEventListener('load', function () { listen(frame); });
+        {% comment %} Covers a frame that finished loading before this ran. {% endcomment %}
+        try { listen(frame); } catch (err) {}
+      })(frames[i]);
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', wire);
+  } else {
+    wire();
+  }
+})();
+</script>
 {% elsif include.platform == "loom" %}
 <div class="video-embed">
   <iframe

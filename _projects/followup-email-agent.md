@@ -7,6 +7,7 @@ order: 3
 featured: true
 tags: [AI Agents, Adoption, Go-to-Market]
 skills: [Glean Agent Builder, Python, pandas, matplotlib]
+thumbnail: /assets/images/classified-stamp.svg
 card_note: "No recording, internal to HubSpot"
 video_platform: none   # proprietary tooling, cannot be screen recorded
 video_id: ""

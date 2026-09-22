@@ -3,7 +3,7 @@ title: "Follow-up email agent"
 summary: "An AI agent for post-call follow-ups. 190 people tried it with no mandate and no rollout, and 28 still use it every month."
 role: "Builder"
 period: "Launched December 2025"
-order: 3
+order: 4
 featured: true
 tags: [AI Agents, Adoption, Go-to-Market]
 skills: [Glean Agent Builder, Python, pandas, matplotlib]

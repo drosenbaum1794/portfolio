@@ -3,7 +3,7 @@ title: "Claude Code and Cowork plugins"
 summary: "Turning repeatable judgment into tooling non-technical people can run themselves."
 role: "Builder"
 period: "Ongoing"
-order: 5
+order: 6
 featured: false
 # Hidden from the site while this page gets rewritten. Delete this line to
 # put it back. Note the file is still readable in the public repo, so treat

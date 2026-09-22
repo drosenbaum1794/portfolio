@@ -7,6 +7,7 @@ order: 4
 featured: false
 tags: [Education, Curriculum, Partnerships]
 skills: [Curriculum Design, Facilitation, Program Management, Partner Sourcing]
+thumbnail: /assets/images/ai-bootcamps-cohorts.jpg
 video_platform: none   # set to youtube or loom once recorded
 video_id: ""           # paste the YouTube or Loom ID here
 stats:

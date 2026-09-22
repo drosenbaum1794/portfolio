@@ -513,6 +513,63 @@ ul { margin: 0; padding: 0; list-style: none; }
   gap: var(--space-5);
 }
 
+/* --------------------------------------------------------------------------
+   Featured carousel. The scrolling is the browser's: an overflowing grid with
+   scroll snapping, so swipe, trackpad, and tabbing to an off-screen card all
+   work without a line of script. The buttons underneath only call scrollBy.
+   -------------------------------------------------------------------------- */
+.carousel__track {
+  --cards: 1;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% - (var(--cards) - 1) * var(--space-5)) / var(--cards));
+  gap: var(--space-5);
+  margin: 0;
+  padding: 0 0 var(--space-1);
+  list-style: none;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  /* The arrows are the affordance, so the bar underneath is just noise. */
+  scrollbar-width: none;
+}
+.carousel__track::-webkit-scrollbar { display: none; }
+.carousel__track > li {
+  display: flex;
+  scroll-snap-align: start;
+}
+.carousel__track > li > .project-card { flex: 1; }
+
+@media (min-width: 640px) { .carousel__track { --cards: 2; } }
+@media (min-width: 960px) { .carousel__track { --cards: 3; } }
+
+/* Hidden until the script has confirmed it can drive them, and hidden again
+   whenever the row already fits. Dead buttons are worse than no buttons. */
+.carousel__controls { display: none; }
+html.js-carousel .carousel__controls {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-3);
+  margin-top: var(--space-5);
+}
+.carousel__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  /* 44x44 touch minimum. */
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-ink);
+  cursor: pointer;
+  transition: border-color var(--duration) var(--ease), opacity var(--duration) var(--ease);
+}
+.carousel__btn:hover:not(:disabled) { border-color: var(--color-ink); }
+.carousel__btn:disabled { opacity: 0.35; cursor: default; }
+.carousel__btn svg { width: 16px; height: 16px; }
+
 .project-card {
   display: flex;
   flex-direction: column;

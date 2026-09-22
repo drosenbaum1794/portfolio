@@ -32,9 +32,34 @@ layout: default
     <h2>Featured projects</h2>
     <a href="{{ '/projects/' | relative_url }}">View all &rarr;</a>
   </div>
-  <div class="project-grid">
-    {% for project in featured limit: 3 %}
-      {% include project-card.html project=project %}
-    {% endfor %}
+  {% comment %}
+    A scroll-snap row rather than a scripted carousel. Swipe, trackpad and
+    keyboard all work on their own because it is just an overflowing list;
+    the buttons underneath only call scrollBy. No limit here, so every
+    featured project is reachable instead of the first three.
+  {% endcomment %}
+  <div class="carousel">
+    <ul class="carousel__track" id="featured-track">
+      {% for project in featured %}
+        <li>{% include project-card.html project=project %}</li>
+      {% endfor %}
+    </ul>
+
+    <div class="carousel__controls">
+      <button type="button" class="carousel__btn" data-carousel-dir="-1"
+              aria-controls="featured-track" aria-label="Show previous projects">
+        <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+          <path d="M10 2 4 8l6 6" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <button type="button" class="carousel__btn" data-carousel-dir="1"
+              aria-controls="featured-track" aria-label="Show more projects">
+        <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+          <path d="M6 2l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </div>
   </div>
 </section>

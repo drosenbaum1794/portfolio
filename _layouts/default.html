@@ -46,6 +46,56 @@
   </script>
 
   {% comment %}
+    Featured carousel buttons. The scrolling itself is the browser's; this
+    only moves it one card at a time and greys the buttons out at each end.
+  {% endcomment %}
+  <script>
+  (function () {
+    var track = document.getElementById('featured-track');
+    if (!track) return;
+
+    var buttons = Array.prototype.slice.call(
+      document.querySelectorAll('[data-carousel-dir]')
+    );
+    if (!buttons.length) return;
+
+    var reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+    function step() {
+      var first = track.firstElementChild;
+      if (!first) return track.clientWidth;
+      var gap = parseFloat(window.getComputedStyle(track).columnGap) || 0;
+      return first.getBoundingClientRect().width + gap;
+    }
+
+    function sync() {
+      var max = track.scrollWidth - track.clientWidth;
+      // Nothing to scroll means nothing to press.
+      document.documentElement.classList.toggle('js-carousel', max > 1);
+      buttons.forEach(function (button) {
+        var dir = Number(button.getAttribute('data-carousel-dir'));
+        button.disabled = dir < 0
+          ? track.scrollLeft <= 1
+          : track.scrollLeft >= max - 1;
+      });
+    }
+
+    buttons.forEach(function (button) {
+      button.addEventListener('click', function () {
+        track.scrollBy({
+          left: Number(button.getAttribute('data-carousel-dir')) * step(),
+          behavior: reduced.matches ? 'auto' : 'smooth'
+        });
+      });
+    });
+
+    track.addEventListener('scroll', sync, { passive: true });
+    window.addEventListener('resize', sync);
+    sync();
+  })();
+  </script>
+
+  {% comment %}
     Photo pile. Shots drop in as the reader moves down the page, spread over
     the scrollable height rather than tied to particular sections, so it
     works whatever the page contains and however many photos there are.
@@ -124,8 +174,15 @@
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     if (!('IntersectionObserver' in window)) return;
 
-    var targets = document.querySelectorAll(
-      '.project-card, .section__header, .stat-row, .chart, .project__meta'
+    var targets = Array.prototype.filter.call(
+      document.querySelectorAll(
+        '.project-card, .section__header, .stat-row, .chart, .project__meta'
+      ),
+      function (el) {
+        // A card parked off to the right of the carousel never intersects the
+        // viewport, so it would sit at opacity 0 until the failsafe fired.
+        return !el.closest('.carousel__track');
+      }
     );
     if (!targets.length) return;
 

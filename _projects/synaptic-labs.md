@@ -1,8 +1,8 @@
 ---
 title: "Synaptic Labs"
-summary: "Co-founded an AI education and deployment company with my brother, grew it from zero revenue to multiple six figures, then handed it off fully in January 2026."
+summary: "Co-founded an AI education and deployment company with my brother and grew it from zero revenue to multiple six figures. I handed over control in January 2026 and still consult for them."
 role: "Co-founder"
-period: "April 2023 to January 2026"
+period: "April 2023 to present"
 order: 2
 featured: true
 tags: [Company Building, AI Education, Partnerships]
@@ -20,8 +20,8 @@ links:
 ## What it was
 
 An AI education and deployment company focused on making AI practical and
-accessible. I co-founded it in April 2023 with my brother and handed it off to
-him fully in January 2026.
+accessible. I co-founded it in April 2023 with my brother and handed over full
+control in January 2026.
 
 My brother brought me the idea in 2023, not long after ChatGPT landed, and I
 was hesitant. Then I went through what I already had in hand and decided that

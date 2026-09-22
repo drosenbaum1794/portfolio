@@ -6,12 +6,13 @@ period: "April 2023 to January 2026"
 order: 2
 featured: true
 tags: [Company Building, AI Education, Partnerships]
-skills: [Curriculum Design, Facilitation, Go-to-Market, Partner Development, AI Strategy]
+skills: [Curriculum Design, Facilitation, Go-to-Market, Partner Development, AI Strategy, HubSpot]
 logo: /assets/images/synaptic-labs-logo.png
 logo_alt: "Synaptic Labs logo"
 logo_url: "https://synapticlabs.ai"
-video_platform: none   # set to youtube or loom once recorded
-video_id: ""           # paste the YouTube or Loom ID here
+thumbnail: https://img.youtube.com/vi/aY6LU6W7nII/maxresdefault.jpg
+video_platform: youtube
+video_id: "aY6LU6W7nII"
 links:
   - label: "synapticlabs.ai"
     url: "https://synapticlabs.ai"
@@ -22,11 +23,25 @@ An AI education and deployment company focused on making AI practical and
 accessible. I co-founded it in April 2023 with my brother and handed it off to
 him fully in January 2026.
 
+My brother brought me the idea in 2023, not long after ChatGPT landed, and I
+was hesitant. Then I went through what I already had in hand and decided that
+if we were going to do this, we were going to do it right.
+
 I came in from the go-to-market side. I was full-time at HubSpot, so I
 understood how to take a product to market, run a CRM, build the website, and
 handle the marketing and sales end. Early on that was most of my job: product
 market fit mapping, running and selling the first education offerings, and
 standing the whole business up on the HubSpot platform.
+
+We opened as an AI consultancy and education agency, then narrowed to
+healthcare, nonprofits, and small business, working across strategy,
+education, development, and coaching. The thinking behind it was simple
+enough to say out loud: we wanted more good people using AI than bad ones,
+and education was the fastest way to get there.
+
+Professor Synapse is the mascot, an AI consciousness sitting in a beaker. The
+name and the character point at the same idea, which is experimenting with
+this stuff rather than talking about it.
 
 ## What I did
 
@@ -39,6 +54,20 @@ standing the whole business up on the HubSpot platform.
   delivering state-funded AI training to eligible Massachusetts employers.
 - Advised businesses on building internal AI Centers of Excellence.
 - Grew the company from zero revenue to multiple six figures.
+
+## What I built on HubSpot
+
+The website, the CRM, payment processing, the whole operational stack ran on
+HubSpot, and I built and designed all of it.
+
+The site carries free tools pointed at the people we were trying to reach. An
+AI readiness assessment walks you through a set of questions and hands back a
+report on where you sit in your AI lifecycle. A prompt library, open to
+anyone, counts views and copies on every prompt and updates those numbers
+live, so you can see which ones people actually take instead of guessing.
+
+Both are free on purpose. Healthcare institutions, nonprofits and small
+businesses need this material most and have the least access to it.
 
 ## How the enablement work actually ran
 
@@ -71,7 +100,8 @@ By the end of my involvement the business was running without really needing me
 in it. We had good people delivering the work, my brother had other developers
 and a community manager around him, and I had been carrying a day job alongside
 it for three years. I decided that the best thing for the longevity of the company
-was to hand it over fully and let him reinvest my share of the profits back into the business.
+was to hand it over fully and let him reinvest my share of the profits back into the business. I still consult for
+them and keep the HubSpot instance running.
 
 Through this experience I really realized that I prefer to dig in with an established team 
 longer term and help take them to the next level of their AI maturity, with the ultimate goal of creating

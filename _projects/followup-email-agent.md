@@ -7,8 +7,9 @@ order: 3
 featured: true
 tags: [AI Agents, Adoption, Go-to-Market]
 skills: [Glean Agent Builder, Python, pandas, matplotlib]
-video_platform: none   # set to youtube or loom once recorded
-video_id: ""           # paste the YouTube or Loom ID here
+card_note: "No recording, internal to HubSpot"
+video_platform: none   # proprietary tooling, cannot be screen recorded
+video_id: ""
 stats:
   - value: "190"
     label: "People who tried it"
@@ -50,6 +51,9 @@ internal documentation and customer context, and produces a follow-up draft in
 the users voice with researched links. Good enough to send with light editing.
 
 I built it outside the scope of my actual role, in my free time.
+
+There's no walkthrough for this one. The agent runs on HubSpot's internal
+systems and proprietary tooling, so I can't screen record it.
 
 ## Results
 

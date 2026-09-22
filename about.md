@@ -28,13 +28,13 @@ timeline:
     org: "HubSpot"
     current: true
     note: "I develop and enable a portfolio of about 25 partners."
-  - dates: "Apr 2023 – Jan 2026"
+  - dates: "Apr 2023 – present"
     role: "Co-founder"
     org: "Synaptic Labs"
     note: "Co-founded an AI education and deployment company with my brother.
       I came in from the go-to-market side, built and ran the bootcamp program
       with HubSpot Academy, and grew the company from zero revenue to multiple
-      six figures before handing it over."
+      six figures before handing over control. I still consult for them."
   - dates: "Aug 2022 – Feb 2024"
     role: "Strategic Channel Consultant"
     org: "HubSpot"

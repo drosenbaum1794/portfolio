@@ -1,7 +1,8 @@
 ---
 title: "HubSpot Product Bundles (Custom Properties + Custom Coded Workflows)"
 summary: "Native bundles lock you in the moment you add them. I built coded workflows that swap a deal's line items when a custom property changes, and gated which bundles each franchisee can even see."
-role: "Builder"
+role: "Builder, HubSpot"
+period: "September 2026"
 order: 0
 featured: true
 tags: [HubSpot, Automation, Solution Design]

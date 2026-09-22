@@ -156,14 +156,16 @@ Below 760px the pile renders complete rather than staged, because there is no
 sidebar there and the photos would otherwise appear after scrolling off
 screen. Same when the reader prefers reduced motion.
 
-For photos anywhere else, markdown works in any page or project body, but the
-path has to go through `relative_url` or it breaks. This site is served from
-`/portfolio/`, so a bare `/assets/...` path resolves to the domain root and
-404s:
+For photos anywhere else, markdown works in any page or project body:
 
 ```
 ![description]({{ '/assets/images/file.jpg' | relative_url }})
 ```
+
+A bare `/assets/...` path happens to work today, because `baseurl` is empty now
+that the site has its own domain. Keep `relative_url` anyway. It costs nothing,
+and it is the difference between every image surviving a move back under a
+subpath and every image breaking at once.
 
 ## Adding a company logo to a project
 
@@ -260,7 +262,7 @@ bundle install
 bundle exec jekyll serve --livereload
 ```
 
-Then open http://localhost:4000/portfolio/. Save any file and the browser
+Then open http://localhost:4000/. Save any file and the browser
 reloads itself.
 
 Because the Gemfile pins the `github-pages` gem, this runs the exact Jekyll and
@@ -276,7 +278,7 @@ Two branches:
 | `master` | The live site. Every push here republishes within a minute or two. |
 | `staging` | Work in progress. Never published. |
 
-Edits land on `staging` and get reviewed at `localhost:4000/portfolio/`. When a
+Edits land on `staging` and get reviewed at `localhost:4000`. When a
 change looks right, it merges to `master` and goes live:
 
 ```

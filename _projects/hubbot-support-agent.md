@@ -7,8 +7,9 @@ order: 1
 featured: true
 tags: [AI Agents, Education, Adoption]
 skills: [GPT Trainer, Slack API, Python, pandas, matplotlib, Evaluation Design]
-video_platform: none   # set to youtube or loom once recorded
-video_id: ""           # paste the YouTube or Loom ID here
+thumbnail: https://img.youtube.com/vi/eI7JWzAM-ys/maxresdefault.jpg
+video_platform: youtube
+video_id: "eI7JWzAM-ys"
 stats:
   - value: "~1,900"
     label: "Queries handled"

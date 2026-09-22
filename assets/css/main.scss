@@ -636,6 +636,17 @@ ul { margin: 0; padding: 0; list-style: none; }
 
 .project__links { display: flex; gap: var(--space-3); margin-bottom: var(--space-6); flex-wrap: wrap; }
 
+/* Optional hero image. Add `hero:` to a project's front matter, plus
+   `hero_alt:` for the description. Natural height rather than a fixed ratio,
+   so a wide graphic and a tall screenshot both render uncropped. */
+.project__hero { margin: var(--space-6) 0; }
+.project__hero img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+}
+
 .project__video { margin: var(--space-6) 0; }
 .video-embed {
   position: relative;

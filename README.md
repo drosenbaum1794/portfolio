@@ -59,7 +59,11 @@ order: 5                # controls sort position. Lower shows first
 featured: true          # homepage shows the first three featured, by order
 tags: [AI Agents, Adoption]           # short labels on the card
 skills: [Python, Slack API]           # shown on the detail page
-thumbnail: /assets/images/projects/my-thumb.jpg   # optional
+thumbnail: /assets/images/projects/my-thumb.jpg   # optional, the card image
+hero: /assets/images/my-hero.jpg      # optional, a big image under the header
+hero_alt: "Describe the image"
+card_note: "No recording"             # optional badge on the card, when there
+                                      # is no walkthrough and the reason matters
 logo: /assets/images/my-logo.png      # optional, see below
 logo_alt: "Company logo"
 logo_url: "https://example.com"       # omit to make the logo non-clickable

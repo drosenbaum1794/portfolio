@@ -5,6 +5,9 @@ role: "Senior Partner Development Manager, HubSpot"
 period: "Ongoing"
 order: 3
 featured: true
+thumbnail: /assets/images/influence-network.jpg
+hero: /assets/images/influence-network.jpg
+hero_alt: "A network diagram: one node at the centre, connected outward through branching lines to well over a hundred smaller unlabelled nodes"
 card_note: "Partner anonymized"
 tags: [Partnerships, Enablement, Change Management]
 skills: [Partner Development, Enablement, Curriculum Design, Stakeholder Management, Program Design]

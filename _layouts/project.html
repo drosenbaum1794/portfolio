@@ -32,6 +32,17 @@ layout: default
     {% endif %}
   </header>
 
+  {% if page.hero %}
+  {% comment %}
+    Sits above the numbers rather than below them. A project with a video
+    puts that after the stats, but a still image is an anchor for the top of
+    the page rather than something the reader goes looking for.
+  {% endcomment %}
+  <figure class="project__hero">
+    <img src="{{ page.hero | relative_url }}" alt="{{ page.hero_alt | default: page.title }}">
+  </figure>
+  {% endif %}
+
   {% if page.stats %}{% include stat-row.html stats=page.stats %}{% endif %}
   {% if page.chart %}{% include chart-bars.html chart=page.chart %}{% endif %}
 

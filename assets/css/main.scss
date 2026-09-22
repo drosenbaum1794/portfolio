@@ -619,6 +619,12 @@ ul { margin: 0; padding: 0; list-style: none; }
   border-top: 1px solid var(--color-border);
   border-bottom: 1px solid var(--color-border);
 }
+/* Skills always takes its own row. Left to wrap on its own it only dropped
+   below Role and Timeline when the text happened to be too wide for the
+   container, so pages disagreed with each other and a page flipped layout
+   as the window resized. Matched on the tag list rather than a position,
+   so it still behaves when a project has no skills to show. */
+.project__meta > div:has(.tag-list) { flex-basis: 100%; }
 .project__meta dt {
   font-size: var(--text-xs);
   text-transform: uppercase;

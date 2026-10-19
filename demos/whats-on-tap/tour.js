@@ -3,7 +3,7 @@
   "use strict";
   var SEEN = "tapdemo-tour-seen";
   var STEPS = [
-    { title: "Welcome to What's on Tap", body: "A personal CRM and life hub built with Claude. In the real version, calendar, email, LinkedIn, workouts, meals and Apple Health all flow into one Supabase database, and Claude keeps it current with scheduled tasks. Everything here is fictional data for a made-up person, Sam, so click around freely." },
+    { title: "Welcome! Want a quick tour?", body: "A personal CRM and life hub built with Claude. In the real version, calendar, email, LinkedIn, workouts, meals and Apple Health all flow into one Supabase database, and Claude keeps it current with scheduled tasks. Everything here is fictional data for a made-up person, Sam, so click around freely." },
     { view: "today", target: "#agenda", up: "article", title: "Today, already sorted", body: "Live events from Google Calendar. During a weekly sync Claude files each event into a category, tags who it's with, and tucks reminders and birthday notes out of the way." },
     { view: "today", target: "#promises", up: "article", title: "Promises you made", body: "Claude reads sent email and meeting agendas for things you said you'd do for someone, then surfaces them before they go stale. Try marking one done, or add your own." },
     { view: "today", target: "#trainBody", up: ".grid", title: "The rest of your day at a glance", body: "Quick reads from the other apps: days since your last workout and how today's eating is going." },
@@ -19,7 +19,7 @@
   var CSS = ".tour-hole{position:fixed;z-index:1000;border-radius:12px;box-shadow:0 0 0 9999px rgba(10,12,18,.55);transition:all .25s ease;pointer-events:none}" +
     ".tour-card{position:fixed;z-index:1001;width:min(400px,calc(100vw - 32px));background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:14px;padding:16px 18px;box-shadow:0 10px 32px rgba(0,0,0,.25);font-family:var(--body)}" +
     ".tour-card h4{font-family:var(--display);font-size:19px;margin:0 0 6px;line-height:1.2}.tour-card p{margin:0;font-size:14px;line-height:1.5;color:var(--ink-2)}" +
-    ".tour-foot{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:14px}.tour-foot .n{font-family:var(--mono);font-size:12px;color:var(--ink-3)}.tour-foot div{display:flex;gap:8px}" +
+    ".tour-foot{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:14px}.tour-foot .n{font-family:var(--mono);font-size:12px;color:var(--ink-3)}.tour-foot{flex-wrap:wrap}.tour-foot div{display:flex;align-items:center;gap:8px}" +
     ".tour-block{position:fixed;inset:0;z-index:999}" +
     "@media(max-width:700px){.tour-card{left:16px!important;right:16px;width:auto;top:auto!important;bottom:max(16px,env(safe-area-inset-bottom))}}" +
     "@media(prefers-reduced-motion:reduce){.tour-hole{transition:none}}";
@@ -44,11 +44,13 @@
     if (s.view && location.hash.slice(1) !== s.view) location.hash = s.view;
     card.textContent = "";
     card.appendChild(el("h4", null, s.title)); card.appendChild(el("p", null, s.body));
-    var f = el("div", "tour-foot"); f.appendChild(el("span", "n", (i + 1) + " of " + STEPS.length));
-    var b = el("div");
-    if (i === 0) b.appendChild(btn("Skip", "ghost", stop)); else b.appendChild(btn("Back", "ghost", function () { i--; show(); }));
-    b.appendChild(btn(i === STEPS.length - 1 ? "Done" : i === 0 ? "Start the tour" : "Next", "primary", function () { if (i === STEPS.length - 1) stop(); else { i++; show(); } }));
-    f.appendChild(b); card.appendChild(f);
+    // Step 0 is the question; every step after it can be skipped outright.
+    var last = i === STEPS.length - 1, f = el("div", "tour-foot"), left = el("div"), b = el("div");
+    if (i) left.appendChild(el("span", "n", i + " of " + (STEPS.length - 1)));
+    if (i && !last) left.appendChild(btn("Skip tour", "ghost", stop));
+    if (i === 0) b.appendChild(btn("No thanks", "ghost", stop)); else b.appendChild(btn("Back", "ghost", function () { i--; show(); }));
+    b.appendChild(btn(last ? "Done" : i === 0 ? "Show me around" : "Next", "primary", function () { if (i === STEPS.length - 1) stop(); else { i++; show(); } }));
+    f.appendChild(left); f.appendChild(b); card.appendChild(f);
     target = null; place();
     // let the view mount and lay out, then find and frame the target
     var tries = 0;
